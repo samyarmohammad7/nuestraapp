@@ -1,9 +1,20 @@
 [build]
-  publish = "public"
+  publish = "."
 
 [functions]
   directory = "netlify/functions"
   node_bundler = "esbuild"
+
+# Los archivos están todos sueltos: estas reglas hacen que icons/... e img/... los encuentren
+[[redirects]]
+  from = "/icons/*"
+  to = "/:splat"
+  status = 200
+
+[[redirects]]
+  from = "/img/*"
+  to = "/:splat"
+  status = 200
 
 [[headers]]
   for = "/sw.js"
