@@ -9,8 +9,10 @@ const json = (obj, status = 200) => new Response(JSON.stringify(obj), { status, 
 const clip = (s, n) => String(s ?? '').slice(0, n);
 
 export default async req => {
-  if (req.method !== 'POST') return json({ error: 'Solo POST' }, 405);
   const { ROOM, FIREBASE_DB_URL, VAPID_PUBLIC_KEY, VAPID_PRIVATE_KEY, VAPID_SUBJECT } = process.env;
+  // GET: la app pide la clave pública para activar los avisos en el celular
+  if (req.method === 'GET') return VAPID_PUBLIC_KEY ? json({ key: VAPID_PUBLIC_KEY }) : json({ error: 'Falta VAPID_PUBLIC_KEY en Netlify' }, 500);
+  if (req.method !== 'POST') return json({ error: 'Solo GET o POST' }, 405);
   if (!ROOM || !FIREBASE_DB_URL || !VAPID_PUBLIC_KEY || !VAPID_PRIVATE_KEY) return json({ error: 'Faltan variables de entorno en Netlify' }, 500);
 
   let b;
