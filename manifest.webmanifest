@@ -1,7 +1,7 @@
 {
   "name": "Nuestra App",
   "short_name": "Nuestra App",
-  "description": "UNO y Cuarenta para jugar a distancia",
+  "description": "Nuestros juegos, cartas y cosas a distancia",
   "lang": "es",
   "start_url": "./",
   "scope": "./",
