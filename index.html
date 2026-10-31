@@ -143,6 +143,41 @@ h1,h2,h3{font-family:var(--fh);font-weight:600;margin:0}
 .tamon i{display:block;width:70%;max-width:30px;border-radius:7px 7px 3px 3px}
 .tamon .cnt{font-size:11px;font-weight:900;color:#ffb3d6}
 .tamon small{font-size:11px;color:var(--muted)}
+/* Cacómetro */
+.caca{position:relative;overflow:hidden;padding:16px;border-radius:22px;margin-bottom:12px;background:linear-gradient(135deg,#3b2414,#1f140d 60%,#160f0b);border:1px solid #5f3d22}
+.caca::after{content:'🚽';position:absolute;right:-14px;top:-18px;font-size:96px;opacity:.07;transform:rotate(14deg);pointer-events:none}
+.caca h3{font-size:21px;text-align:center}
+.caca .sub{text-align:center;font:700 19px var(--fs);color:#e7b98a;margin:0 0 10px}
+.cvs{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:8px;text-align:center}
+.cvs .cp b{display:block;font:700 44px/1 var(--fh)}
+.cvs .cp small{display:block;font-size:12px;color:var(--muted)}
+.cvs .cp .nm{font:600 17px var(--fh)}
+.cvs .cp .last{font-size:11.5px;color:#c9a07a;margin-top:3px}
+.cvs .cp b.bump{animation:pulse .5s}
+.cvs em{font-style:normal;font-size:30px}
+.cking{text-align:center;font-size:13px;font-weight:900;color:#ffd36b;margin:2px 0 4px}
+.cbtn{display:flex;width:100%;justify-content:center;align-items:center;gap:10px;margin:12px 0 4px;padding:15px;border-radius:18px;font:600 21px var(--fh);color:#fff;background:linear-gradient(135deg,#7a4a22,#b9772f 55%,#e09a45);box-shadow:0 12px 28px -10px rgba(224,154,69,.6);transition:transform .12s}
+.cbtn:active{transform:scale(.96)}
+.cbtn span{font-size:28px;display:inline-block}
+.cbtn.go span{animation:plop .5s}
+@keyframes plop{0%{transform:translateY(-14px) scale(.6)}60%{transform:translateY(2px) scale(1.15,.85)}100%{transform:none}}
+.ctype{margin:8px 0 2px;text-align:center}
+.ctype p{margin:0 0 6px;font-size:12.5px;color:#e7b98a}
+.ctype div{display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.ctype button{padding:6px 10px;border-radius:999px;background:rgba(255,255,255,.06);border:1px solid #5f3d22;font-size:13px;font-weight:800}
+.ctype button.on{background:#b9772f;border-color:#e09a45}
+.cweek{display:flex;align-items:flex-end;justify-content:space-around;gap:4px;height:82px;margin:14px 0 2px}
+.cweek>div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;gap:3px;height:100%}
+.cweek .bars{display:flex;align-items:flex-end;gap:2px;height:58px}
+.cweek .bars i{display:block;width:9px;border-radius:5px 5px 2px 2px;min-height:3px}
+.cweek small{font-size:10.5px;color:var(--muted)}
+.cweek .hoy small{color:#ffd36b;font-weight:900}
+.cfacts{font-size:12.5px;color:#d9b48f;text-align:center;margin:8px 0 0;line-height:1.55}
+.chist{display:grid;gap:5px;margin-top:10px}
+.chist div{display:flex;gap:8px;align-items:center;font-size:13px;padding:6px 10px;border-radius:12px;background:rgba(255,255,255,.05)}
+.chist div span{margin-left:auto;font-size:11.5px;color:var(--muted);white-space:nowrap}
+.caca .talinks{display:flex;justify-content:center;gap:16px;margin-top:10px;font-size:13px}
+.caca .link{color:#e09a45}
 .teamo .row{margin-top:12px}
 .btn.wa{background:linear-gradient(135deg,#25d366,#128c7e);box-shadow:0 10px 24px -12px rgba(37,211,102,.8)}
 .talinks{display:flex;justify-content:center;gap:18px;margin-top:10px;font-size:13.5px}
@@ -341,6 +376,168 @@ body.has-music .toast{bottom:calc(96px + env(safe-area-inset-bottom))}
 #confetti{position:fixed;inset:0;width:100vw;height:100vh;z-index:83;pointer-events:none}
 @media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;animation-iteration-count:1!important}}
 @media (min-width:480px){.uc{--w:70px}.board .uc{--w:106px}.myhand .pc{--w:72px}.pc{--w:62px}}
+/* ===== Cosas nuevas ===== */
+input,textarea{-webkit-user-select:text;user-select:text}
+.inp,.sheet input[type=date],.sheet textarea{width:100%;font:600 16px var(--fb);color:var(--text);background:var(--panel2);border:1px solid var(--line);border-radius:14px;padding:12px;outline:none;color-scheme:dark;resize:vertical}
+.inp:focus,.sheet input[type=date]:focus{border-color:var(--pink)}
+.sec{display:flex;align-items:baseline;gap:8px;font:600 22px var(--fh);margin:22px 4px 10px}
+.sec small{font:700 13px var(--fb);color:var(--muted);margin-left:auto}
+.mgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:12px}
+.mtile{position:relative;display:flex;flex-direction:column;justify-content:flex-end;min-height:122px;padding:14px;border-radius:22px;overflow:hidden;background:linear-gradient(150deg,color-mix(in srgb,var(--c1) 55%,#120c16),color-mix(in srgb,var(--c2) 32%,#0c0810));border:1px solid rgba(255,255,255,.1);transition:transform .15s;text-align:left;color:#fff}
+.mtile:active{transform:scale(.97)}
+.mtile .ic{position:absolute;right:10px;top:8px;font-size:40px;filter:drop-shadow(0 6px 10px rgba(0,0,0,.4))}
+.mtile b{font:600 18px/1.1 var(--fh)}
+.mtile small{font-size:12px;color:rgba(255,255,255,.78);margin-top:3px;line-height:1.25}
+.mtile .chip{position:absolute;left:10px;top:10px;font-size:11px;padding:3px 8px}
+.vernos{display:block;width:100%;margin-top:10px;padding:10px;border-radius:14px;background:var(--panel2);border:1px solid var(--line);font-size:14px;font-weight:800;text-align:center}
+.vernos b{color:#ffd36b}
+.vernos.hoy{background:linear-gradient(90deg,rgba(255,45,85,.35),rgba(157,107,255,.35));animation:pulse 2.4s infinite}
+/* Pregunta del día */
+.dq{padding:16px;border-radius:22px;margin-bottom:12px;background:linear-gradient(140deg,#2d2410,#1d1428 70%);border:1px solid #5a4a22}
+.dqh{display:flex;justify-content:space-between;align-items:center;font-weight:900;font-size:13px;color:#ffd36b;margin-bottom:6px}
+.dqh .link{font-size:12px;color:#ffd36b}
+.dq h3{font:600 20px/1.25 var(--fh);margin-bottom:10px}
+/* Boda */
+.bodat{display:flex;align-items:center;gap:14px;padding:16px;border-radius:22px;margin-bottom:12px;background:linear-gradient(135deg,#f6e7d0,#f3c9d9 60%,#d9c4f2);color:#3a2232;box-shadow:0 14px 30px -14px rgba(243,201,217,.55)}
+.bodat:active{transform:scale(.98)}
+.bodat .ring{font-size:40px;animation:bob 3s ease-in-out infinite}
+.bodat .t{font:700 24px/1 var(--fs);color:#8a2a5c}
+.bodat b{display:block;font:700 30px/1.05 var(--fh);color:#8a2a5c;margin-top:2px}
+.bodat small{display:block;font-size:12.5px;color:#6b4a5c;font-weight:800;margin-top:2px}
+.boda{position:relative;overflow:hidden;text-align:center;padding:22px 16px 18px;border-radius:26px;margin:4px 0 12px;background:radial-gradient(circle at 50% 0%,rgba(255,255,255,.7),transparent 60%),linear-gradient(160deg,#f8ecd9,#f4cfe0 55%,#dccaf5);color:#3a2232}
+.boda::before,.boda::after{content:'🌸';position:absolute;font-size:60px;opacity:.25}
+.boda::before{left:-14px;top:-10px;transform:rotate(-20deg)}
+.boda::after{right:-12px;bottom:-14px;transform:rotate(25deg)}
+.boda .ring{font-size:54px;display:inline-block;animation:bob 3s ease-in-out infinite}
+.boda h1{font:700 36px/1 var(--fs);color:#8a2a5c;margin:4px 0 8px}
+.boda .n{font:700 76px/1 var(--fh);color:#8a2a5c;margin:4px 0 2px}
+.boda .l{font-weight:900;color:#6b4a5c}
+.boda .sub2{font-size:13.5px;color:#7d5d6e;margin-top:8px;font-weight:800}
+.boda .when{display:inline-block;margin-top:12px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.65);font-weight:900;font-size:14px;color:#6b2a4c}
+.boda .edit{margin-top:12px;font-weight:900;color:#8a2a5c;text-decoration:underline;font-size:14px}
+.boda .units{display:flex;justify-content:center;gap:8px;margin-top:14px}
+.boda .units div{min-width:70px;padding:8px 6px;border-radius:14px;background:rgba(255,255,255,.6)}
+.boda .units b{display:block;font:700 24px/1 var(--fh);color:#8a2a5c}
+.boda .units small{font-size:11px;color:#7d5d6e;font-weight:800}
+/* Fotos */
+.pbh{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:10px}
+.pbh h3{margin:0!important}
+.pbh label{cursor:pointer}
+.pcats{display:flex;gap:6px;overflow-x:auto;padding:0 0 6px;margin:0 0 8px;scrollbar-width:none}
+.pcats::-webkit-scrollbar{display:none}
+.pcats button{flex:none;padding:6px 11px;border-radius:999px;background:var(--panel2);border:1px solid var(--line);font-size:13px;font-weight:800;white-space:nowrap}
+.pcats button.on{background:var(--pink);border-color:transparent;color:#fff}
+.pgrid{display:grid;grid-template-columns:repeat(3,1fr);gap:6px}
+.pph{position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;background:var(--panel2)}
+.pph img{width:100%;height:100%;object-fit:cover;display:block}
+.pph span{position:absolute;left:5px;bottom:5px;font-size:13px;padding:2px 5px;border-radius:8px;background:rgba(0,0,0,.5)}
+.pph em{position:absolute;right:5px;top:5px;font-style:normal;font-size:15px;filter:drop-shadow(0 1px 3px rgba(0,0,0,.6))}
+.pempty{text-align:center;font-size:13.5px;padding:14px 6px 4px;margin:0}
+.pview img{width:100%;border-radius:16px;display:block;max-height:58vh;object-fit:contain;background:#000}
+.pprev{display:flex;gap:6px;overflow-x:auto;margin:8px 0}
+.pprev img{width:76px;height:76px;object-fit:cover;border-radius:12px;flex:none}
+/* Listas */
+.clist{display:grid;gap:6px;margin-top:8px}
+.citem{display:flex;align-items:center;gap:10px;padding:10px 12px;border-radius:14px;background:var(--panel2);font-size:14.5px}
+.citem .ck{flex:none;width:28px;height:28px;border-radius:9px;border:2px solid #5a4466;display:grid;place-items:center;font-size:15px;font-weight:900}
+.citem.done .ck{background:var(--ok);border-color:var(--ok);color:#06210f}
+.citem.done .tx{color:var(--muted)}
+.citem.done .tx>:not(small){text-decoration:line-through}
+.citem .tx{flex:1;min-width:0;word-break:break-word}
+.citem .tx small{display:block;font-size:11.5px;color:var(--muted);margin-top:1px}
+.citem .x{flex:none;color:var(--muted);font-size:15px;padding:4px}
+.citem .lv{flex:none;font-size:17px;padding:4px 6px}
+.addrow{display:flex;gap:8px;margin-top:10px;align-items:center}
+.addrow .inp{flex:1;min-width:0}
+/* Juegos */
+.ghead{display:flex;align-items:center;gap:6px;margin:4px 0 8px}
+.ghead em{font:900 11px var(--fb);color:var(--muted);font-style:normal}
+.gp{flex:1;display:flex;align-items:center;gap:6px;padding:9px 12px;border-radius:16px;background:var(--panel);border:2px solid var(--line);transition:border-color .2s,box-shadow .2s;min-width:0}
+.gp b{display:block;font:600 17px var(--fh);color:var(--c)}
+.gp small{display:flex;align-items:center;gap:4px;font-size:11.5px;color:var(--muted)}
+.gp span{margin-left:auto;font:700 26px var(--fh)}
+.gp.on{border-color:var(--c);box-shadow:0 0 0 4px color-mix(in srgb,var(--c) 22%,transparent)}
+.gp .dot{display:inline-block;width:10px;height:10px;border-radius:50%}
+.gwin{text-align:center;padding:14px;border-radius:20px;background:var(--panel);border:1px solid var(--line);margin:12px 0;font:600 23px var(--fh)}
+.gwin .btn{display:flex;margin:12px auto 0}
+.gwin p{font:700 14px var(--fb);color:var(--muted);margin:4px 0 0}
+.t3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:330px;margin:16px auto}
+.t3 button{aspect-ratio:1;border-radius:22px;background:var(--panel);border:2px solid var(--line);font:700 60px/1 var(--fh);display:grid;place-items:center}
+.t3 button.w{background:color-mix(in srgb,var(--c) 28%,var(--panel));border-color:var(--c)}
+.t3 button.new{animation:pop2 .3s ease-out}
+@keyframes pop2{0%{transform:scale(.4)}70%{transform:scale(1.1)}100%{transform:none}}
+.c4{display:grid;grid-template-columns:repeat(7,1fr);gap:5px;padding:8px;border-radius:20px;background:linear-gradient(160deg,#2a4fb0,#1b347a);max-width:420px;margin:16px auto;box-shadow:0 16px 30px -14px rgba(42,79,176,.8);overflow:hidden}
+.c4 i{aspect-ratio:1;border-radius:50%;background:#0d0a12;display:block;box-shadow:inset 0 3px 6px rgba(0,0,0,.6);cursor:pointer}
+.c4 i.p{background:var(--c);box-shadow:inset 0 -4px 0 rgba(0,0,0,.25)}
+.c4 i.w{box-shadow:0 0 0 3px #fff,inset 0 -4px 0 rgba(0,0,0,.25)}
+.c4 i.new{animation:drop .45s cubic-bezier(.5,0,.7,1.3)}
+@keyframes drop{from{transform:translateY(calc(var(--r) * -115%))}}
+.mem{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;max-width:400px;margin:14px auto}
+.mc{aspect-ratio:3/4;perspective:600px}
+.mc>div{position:relative;width:100%;height:100%;transition:transform .45s;transform-style:preserve-3d}
+.mc.up>div{transform:rotateY(180deg)}
+.mc .f,.mc .bk{position:absolute;inset:0;border-radius:14px;display:grid;place-items:center;backface-visibility:hidden;-webkit-backface-visibility:hidden}
+.mc .bk{background:linear-gradient(135deg,var(--pink),var(--purple));font-size:20px;border:2px solid rgba(255,255,255,.25)}
+.mc .f{background:#fff6e9;transform:rotateY(180deg);font-size:34px;border:3px solid transparent}
+.mc.got .f{border-color:var(--c);box-shadow:0 0 12px -2px var(--c)}
+.ah-b{display:flex;justify-content:center;gap:4px;font-size:32px;margin:12px 0 0;min-height:46px}
+.ah-b span{display:inline-block;animation:float 2.4s ease-in-out infinite}
+.ah-b span.bang{animation:none;opacity:.5}
+@keyframes float{50%{transform:translateY(-6px)}}
+.ah-g{display:block;width:62px;height:62px;border-radius:50%;object-fit:cover;margin:2px auto 0;border:3px solid #fff;transition:transform .8s}
+.ah-g.fall{transform:translateY(24px) rotate(170deg)}
+.ah-w{display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin:18px 0 10px;font:700 28px/1.2 var(--fh)}
+.ah-w span{min-width:24px;text-align:center;border-bottom:3px solid #6a5577;padding:0 2px;min-height:36px}
+.ah-w span.sp{border:0;min-width:12px}
+.ah-w span.miss{color:#ff6b8a}
+.ah-k{display:grid;grid-template-columns:repeat(9,1fr);gap:5px;margin:12px 0}
+.ah-k button{height:44px;border-radius:10px;background:var(--panel2);border:1px solid var(--line);font:700 17px var(--fh)}
+.ah-k button.ok{background:var(--ok);color:#06210f;border-color:transparent}
+.ah-k button.no{background:#3a1622;color:#7a5560;border-color:transparent}
+.ah-p{text-align:center;font-size:14px;color:#ffd36b;font-weight:800;margin:10px 0 0}
+/* Preguntas */
+.qcard{padding:20px 16px;border-radius:24px;text-align:center;background:linear-gradient(150deg,color-mix(in srgb,var(--c1) 45%,#151018),color-mix(in srgb,var(--c2) 30%,#100b14));border:1px solid rgba(255,255,255,.1);margin:6px 0 12px}
+.qcard .qc{font-size:13px;font-weight:900;color:rgba(255,255,255,.75)}
+.qcard h2{font:600 23px/1.25 var(--fh);margin:8px 0 2px}
+.qopts{display:grid;gap:8px;margin:10px 0}
+.qopts button{padding:14px;border-radius:16px;background:var(--panel);border:2px solid var(--line);font-weight:900;font-size:15.5px}
+.qopts button:active{transform:scale(.98)}
+.qopts button.on{border-color:var(--pink);background:color-mix(in srgb,var(--pink) 25%,var(--panel))}
+.qans{display:grid;gap:8px;margin:8px 0}
+.qans>div{padding:11px 14px;border-radius:16px;background:var(--panel2);border-left:4px solid var(--c);font-size:15px;word-break:break-word;white-space:pre-wrap}
+.qans b{display:block;font:600 14px var(--fh);color:var(--c);margin-bottom:2px}
+.qmatch{text-align:center;font:600 21px var(--fh);margin:10px 0 4px;color:#ffd36b}
+.qwait{text-align:center;color:var(--muted);font-size:14px;margin:10px 0}
+/* Cartas */
+.tabs{display:flex;gap:6px;padding:4px;border-radius:999px;background:var(--panel);border:1px solid var(--line);margin:4px 0 12px}
+.tabs button{flex:1;padding:9px;border-radius:999px;font-weight:900;font-size:14px;color:var(--muted)}
+.tabs button.on{background:linear-gradient(135deg,var(--pink),var(--purple));color:#fff}
+.sobres{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.sobre{position:relative;padding:18px 10px 12px;border-radius:16px;background:#fff6e9;color:#3a2232;text-align:center;min-height:134px;box-shadow:0 10px 20px -10px rgba(0,0,0,.6);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px;overflow:hidden}
+.sobre::before{content:'';position:absolute;left:0;right:0;top:0;height:52px;background:linear-gradient(to bottom right,#f1dcc2 50%,transparent 50.5%) left/50% 100% no-repeat,linear-gradient(to bottom left,#f1dcc2 50%,transparent 50.5%) right/50% 100% no-repeat;pointer-events:none}
+.sobre>*{position:relative}
+.sobre .sello{font-size:30px}
+.sobre b{font:700 21px/1.05 var(--fs);color:#9b4a75}
+.sobre small{font-size:11px;color:#9b7f8f;font-weight:800}
+.sobre.open{opacity:.72}
+.carta{padding:18px 16px;border-radius:18px;background:#fff6e9;color:#3a2232;margin:4px 0 8px}
+.carta h4{font:800 14px var(--fb);color:#9b4a75;margin:0}
+.carta p{font:600 26px/1.2 var(--fs)!important;color:#3a2232!important;white-space:pre-wrap;word-break:break-word;margin:10px 0}
+.carta small{font-size:12px;color:#9b7f8f}
+/* Frasco */
+.jar{text-align:center;padding:20px 16px;border-radius:24px;background:radial-gradient(circle at 50% 30%,rgba(255,79,163,.25),transparent 60%),linear-gradient(160deg,#2b1830,#171021);border:1px solid var(--line);margin:4px 0 12px}
+.jar .j{font-size:86px;display:inline-block;line-height:1.1}
+.jar .j.shake{animation:shake .5s}
+.jar b{display:block;font:700 26px var(--fh)}
+.razon{margin:14px 0 0;padding:16px;border-radius:18px;background:#fff6e9;color:#3a2232;font:600 27px/1.2 var(--fs);animation:up .35s ease-out;word-break:break-word}
+/* Vales */
+.vale{position:relative;display:flex;align-items:center;gap:12px;padding:14px 12px 14px 16px;border-radius:16px;margin-bottom:8px;background:linear-gradient(135deg,#ffe19a,#ffb547);color:#3a2232;border:2px dashed rgba(58,34,50,.35)}
+.vale .vi{font-size:30px}
+.vale .vt{flex:1;min-width:0}
+.vale .vt b{display:block;font:700 24px/1.05 var(--fs);margin:1px 0}
+.vale .vt small{font-size:11px;font-weight:900;color:#7a4f22;letter-spacing:.02em}
+.vale .btn{padding:8px 13px;font-size:13px}
+.vale.used{filter:grayscale(.85);opacity:.55}
 </style>
 </head>
 <body>
@@ -353,6 +550,7 @@ body.has-music .toast{bottom:calc(96px + env(safe-area-inset-bottom))}
 
 <script type="module">
 import * as R from './reglas.js';
+import * as Q from './preguntas.js';
 
 /* =====================================================================
    CONFIGURACIÓN
@@ -616,6 +814,14 @@ const sfx = {
   pop() { tone(520, .1, 'triangle', .15); tone(780, .12, 'triangle', .15, .08); tone(1040, .18, 'triangle', .13, .16); },
   win() { [523, 659, 784, 1046, 784, 1046].forEach((f, i) => tone(f, .22, 'triangle', .13, i * .12)); },
   sad() { tone(440, .2, 'sine', .1); tone(349, .3, 'sine', .1, .18); },
+  plop() {
+    const c = actx(); if (!c || !SND.on) return;
+    const t = c.currentTime, o = c.createOscillator(), g = c.createGain();
+    o.type = 'sine'; o.frequency.setValueAtTime(620, t); o.frequency.exponentialRampToValueAtTime(110, t + .16);
+    g.gain.setValueAtTime(.22, t); g.gain.exponentialRampToValueAtTime(.001, t + .22);
+    o.connect(g).connect(c.destination); o.start(t); o.stop(t + .25);
+    tone(180, .12, 'sine', .08, .2);
+  },
 };
 
 /* ---------- Fechas ---------- */
@@ -864,7 +1070,7 @@ function openMusic(tab) {
 const view = $('#view'), top = $('#top');
 let store, me, them, presence = {}, current = null, bootT = 0;
 const games = { uno: null, cuarenta: null }, retos = { uno: null, cuarenta: null };
-let historial = {}, notas = {}, teamo = {};
+let historial = {}, notas = {}, teamo = {}, cacas = {};
 const GNAME = { uno: 'UNO', cuarenta: 'Cuarenta' };
 
 function renderTop(title, extra = '') {
@@ -885,7 +1091,7 @@ const reactBar = () => `<div class="reacts">${['😘', '😂', '😱', '🙄', '
 document.addEventListener('click', e => {
   const r = e.target.closest('[data-react]'); if (!r || !store) return;
   store.set('cartas/react/' + me, { e: r.dataset.react, t: store.now() });
-  if (r.dataset.react === 'rain') { rain(20); toast(`Le mandaste una lluvia de besos a ${pname(them)} 💋`); sfx.pop(); } else flyE(r.dataset.react);
+  if (r.dataset.react === 'rain') { sendPush(them, '💋 Lluvia de besos', `${pname(me)} te mandó una lluvia de besos`, '/', 'besos'); rain(20); toast(`Le mandaste una lluvia de besos a ${pname(them)} 💋`); sfx.pop(); } else flyE(r.dataset.react);
 });
 
 const sha = async s => [...new Uint8Array(await crypto.subtle.digest('SHA-256', new TextEncoder().encode(s)))].map(b => b.toString(16).padStart(2, '0')).join('');
@@ -944,6 +1150,21 @@ function start() {
     const prev = teamo.wa?.at; teamo = v || {}; current?.onTeAmo?.();
     const w = teamo.wa; if (w && w.at !== prev && w.by === them && w.at > bootT) toast(`📲 ${pname(them)} actualizó los te amo con WhatsApp: ${((w[P[0]] || 0) + (w[P[1]] || 0)).toLocaleString('es')}`, 4000);
   });
+  let cacaSeen = null;
+  store.on('cartas/cacas', v => {
+    cacas = v || {};
+    const list = cacaList();
+    if (cacaSeen) {
+      const nueva = list.filter(c => !cacaSeen.has(c.id) && c.p === them && c.t > bootT).pop();
+      if (nueva) {
+        const n = list.filter(c => c.p === them && cacaDay(c.t, them) === cacaDay(nueva.t, them)).length;
+        rain(18, ['💩', '🧻', '🚽', '💨']); sfx.plop(); navigator.vibrate?.([40, 30, 90]);
+        toast(`💩 ${pname(them)} acaba de echarse una · la ${n}ª de hoy`, 3500);
+      }
+    }
+    cacaSeen = new Set(list.map(c => c.id));
+    current?.onCacas?.();
+  });
   store.on('cartas/playlist', v => { playlistExtra = v || {}; current?.onMusic?.(); });
   let titT; store.on('cartas/titulos', v => { if (!v) return; Object.assign(titulos, v); clearTimeout(titT); titT = setTimeout(() => { lsSet('nuestra:titulos', JSON.stringify(titulos)); applyTitles(); updateBar(); current?.onMusic?.(); }, 400); });
   store.on('cartas/ocultas', v => { ocultas = v || {}; current?.onMusic?.(); });
@@ -968,23 +1189,68 @@ function start() {
       const mine = !!(v && !v.winner && v.turn === me);
       if (mine && lastTurnAlert[g] === false && current?.id !== g) { toast(`🃏 Te toca en ${GNAME[g]}`); sfx.turn(); }
       lastTurnAlert[g] = mine;
+      pushTurn(g, v);
       updateTitle();
       current?.onGames?.();
     });
   }
+  for (const g of Object.keys(JUEGOS)) store.on('cartas/j/' + g, v => {
+    jgames[g] = v;
+    const mine = !!(v && !v.winner && v.turn === me);
+    if (mine && lastTurnAlert[g] === false && current?.id !== g) { toast(`${JUEGOS[g].icon} Te toca en ${GNAME[g]}`); sfx.turn(); }
+    lastTurnAlert[g] = mine;
+    pushTurn(g, v);
+    updateTitle();
+    current?.onGames?.();
+  });
+  store.on('cartas/boda/info', v => { boda = v || {}; current?.onBoda?.(); });
+  store.on('cartas/vernos', v => { vernos = v || {}; current?.onVernos?.(); });
+  let cartasSeen = null;
+  store.on('cartas/cartas', v => {
+    cartas = v || {};
+    const l = listOf(cartas);
+    if (cartasSeen) for (const c of l) {
+      const prev = cartasSeen[c.id];
+      if (prev === undefined && c.para === me) { toast(`💌 ${pname(them)} te escribió una carta: «Ábrela cuando ${c.cuando}»`, 4200); sfx.pop(); rain(12, ['💌', '💗']); navigator.vibrate?.([60, 40, 60]); }
+      else if (prev === 0 && c.abierta && c.de === me) { toast(`💌 ${pname(them)} abrió tu carta «Ábrela cuando ${c.cuando}»`, 4200); sfx.pop(); }
+    }
+    cartasSeen = Object.fromEntries(l.map(c => [c.id, c.abierta || 0]));
+    current?.onCartas?.();
+  });
+  let cupSeen = null;
+  store.on('cartas/cupones', v => {
+    cupones = v || {};
+    const l = listOf(cupones);
+    if (cupSeen) for (const c of l) {
+      const prev = cupSeen[c.id];
+      if (prev === undefined && c.para === me) { toast(`🎁 ${pname(them)} te regaló un vale: «${c.texto}»`, 4200); sfx.pop(); rain(12, ['🎟️', '🎁']); }
+      else if (prev === 0 && c.usado && c.de === me) { popup('¡Vale canjeado!', `${pname(them)}: ${c.texto}`); sfx.win(); navigator.vibrate?.([80, 50, 80]); }
+    }
+    cupSeen = Object.fromEntries(l.map(c => [c.id, c.usado || 0]));
+    current?.onCupones?.();
+  });
+  swReg();
   document.addEventListener('visibilitychange', () => current && store.presence(me, { at: current.id, on: !document.hidden }));
   addEventListener('hashchange', route);
   route();
 }
+const lastTurnSeen = {};
+function pushTurn(g, v) {
+  const prev = lastTurnSeen[g];
+  lastTurnSeen[g] = v ? (v.winner ? 'fin' : v.turn) : null;
+  if (prev === me && v && !v.winner && v.turn === them) sendPush(them, `${GICON[g] || '🎲'} Te toca en ${GNAME[g]}`, `${pname(me)} ya jugó. ¡Tu turno!`, '/#/' + g, 'turno-' + g);
+}
 function updateTitle() {
-  const n = ['uno', 'cuarenta'].filter(g => games[g] && !games[g].winner && games[g].turn === me).length;
+  const all = { ...games, ...jgames };
+  const n = Object.keys(all).filter(g => all[g] && !all[g].winner && all[g].turn === me).length;
   document.title = (n ? '● Tu turno · ' : '') + 'Nuestra App';
 }
 function route() {
   const id = location.hash.replace(/^#\/?/, '');
   if (current) current.cleanup();
   scrollTo(0, 0);
-  if (id === 'uno') mountUno(); else if (id === 'cuarenta') mountC40(); else mountLobby();
+  const SCREENS = { uno: mountUno, cuarenta: mountC40, boda: mountBoda, album: mountAlbum, tres: mountTres, c4: mountC4, memoria: mountMemoria, ahorcado: mountAhorcado, preguntas: mountPreguntas, cartas: mountCartas, razones: mountRazones, cupones: mountCupones, planes: mountPlanes };
+  (SCREENS[id] || mountLobby)();
   store.presence(me, { at: current.id, on: !document.hidden });
 }
 
@@ -1022,16 +1288,24 @@ function mountLobby() {
     ${store.mode === 'local' ? `<div class="note">${store.error ? `<b>${esc(store.error)}</b><br>` : ''}<b>Modo de prueba:</b> solo se sincroniza en este dispositivo.</div>` : ''}
     <div class="stats"><div class="stat"><b>${f.dias}</b><span>días juntos 💜</span></div><div class="stat"><b>${f.faltan === 0 ? '¡Hoy!' : f.faltan}</b><span>${f.faltan === 0 ? 'es nuestro mesiversario' : `${f.faltan === 1 ? 'día' : 'días'} para cumplir ${f.meses + 1} ${f.meses + 1 === 1 ? 'mes' : 'meses'}`}</span></div></div>
     <div class="dist" id="dist"></div>
+    <div id="bodat"></div>
     <div id="nota"></div>
+    <div class="dq" id="dq"></div>
     <div class="teamo" id="teamo"></div>
+    <div class="caca" id="caca"></div>
+    <div class="sec">🎲 Juegos <small>para jugar a distancia</small></div>
     <a class="tile uno" href="#/uno"><div class="deco">${unoCard('r7.x')}${unoCard('wF.x')}</div><h2>UNO</h2><p class="muted">El clásico. Primero a 500 puntos.</p><div class="st" id="st-uno"></div></a>
     <a class="tile c40" href="#/cuarenta"><div class="deco">${pCard('Kh')}${pCard('7s')}</div><h2>Cuarenta</h2><p class="muted">Caída, limpia y cartón. A 40.</p><div class="st" id="st-cuarenta"></div></a>
+    <div class="mgrid" id="jgrid"></div>
     <button class="musiccard" id="mcard"></button>
     <div class="gchips" id="gchips"></div>
     <div class="card" id="marcador"></div>
+    <div class="sec">💗 Solo nuestro</div>
+    <div class="mgrid" id="ngrid"></div>
     <button class="kiss" data-react="rain">💋 Mándale una lluvia de besos</button>
     ${reactBar()}
-    <p class="foot muted">Jugando como <b>${esc(pname(me))}</b> · <button class="link" id="swap">salir</button></p>`;
+    <p class="foot muted">Jugando como <b>${esc(pname(me))}</b> · <button class="link" id="swap">salir</button> · <button class="link" id="avisos">🔔 avisos</button></p>`;
+  $('#avisos').onclick = openAvisos;
   $('#swap').onclick = () => { try { localStorage.removeItem('juegos:yo'); localStorage.removeItem('nuestra:pin:' + me); } catch {} location.href = location.pathname; };
   const clocks = () => {
     const h = localHour(me), th = localHour(them);
@@ -1041,7 +1315,8 @@ function mountLobby() {
     const momento = th >= 5 && th < 12 ? 'es de mañana' : th >= 12 && th < 19 ? 'es de tarde' : 'es de noche';
     d.innerHTML = `<div class="ends"><div class="city">${sky(localHour(a))} ${esc(CONFIG.PLAYERS[a].city)}<b>${localTime(a)}</b></div><div class="city r">${esc(CONFIG.PLAYERS[b].city)} ${sky(localHour(b))}<b>${localTime(b)}</b></div></div>
       <div class="line"><span class="d" style="left:0;--c:${pcol(a)}"></span><span class="plane">✈️</span><span class="d" style="right:0;--c:${pcol(b)}"></span></div>
-      <div class="km"><b>${km().toLocaleString('es')} km</b> nos separan, pero jugamos en la misma mesa · en ${esc(CONFIG.PLAYERS[them].city)} ${momento}</div>`;
+      <div class="km"><b>${km().toLocaleString('es')} km</b> nos separan, pero jugamos en la misma mesa · en ${esc(CONFIG.PLAYERS[them].city)} ${momento}</div>${vernosBtn()}`;
+    $('#vernos', d).onclick = editVernos;
   };
   const renderNota = () => {
     const el = $('#nota'); if (!el) return;
@@ -1051,7 +1326,7 @@ function mountLobby() {
       <div class="w"><button id="wnota">${mine?.text ? '✏️ Cambiar mi nota' : `✏️ Dejarle una nota a ${esc(pname(them))}`}</button></div></div>`;
     $('#wnota').onclick = () => {
       const sh = sheet(`<h3>💌 Nota para ${esc(pname(them))}</h3><p>La verá al abrir la app.</p><textarea id="nt" rows="3" maxlength="200" placeholder="Escribe algo bonito">${esc(mine?.text || '')}</textarea><div class="row"><button class="btn" id="nok">Dejar nota</button><button class="btn ghost" data-close>Cancelar</button></div>`);
-      $('#nok', sh).onclick = () => { const v = $('#nt', sh).value.trim(); store.set('cartas/notas/' + me, v ? { text: v, t: store.now() } : null); sh.remove(); if (v) { toast('💌 Nota dejada'); sfx.pop(); } };
+      $('#nok', sh).onclick = () => { const v = $('#nt', sh).value.trim(); store.set('cartas/notas/' + me, v ? { text: v, t: store.now() } : null); sh.remove(); if (v) { toast('💌 Nota dejada'); sfx.pop(); sendPush(them, '💌 Nota nueva', `${pname(me)}: ${v}`, '/', 'nota'); } };
     };
   };
   const status = () => {
@@ -1075,8 +1350,8 @@ function mountLobby() {
     const [a, b] = P;
     el.innerHTML = `<h3>🏆 Nuestro marcador</h3>
       <div class="vs"><div><b style="color:${pcol(a)}">${tot(a)}</b><small>${esc(pname(a))}</small></div><div class="muted" style="font:600 16px var(--fh)">vs</div><div><b style="color:${pcol(b)}">${tot(b)}</b><small>${esc(pname(b))}</small></div></div>
-      <div class="muted" style="font-size:13px;text-align:center">UNO ${cnt('uno', a)} a ${cnt('uno', b)} · Cuarenta ${cnt('cuarenta', a)} a ${cnt('cuarenta', b)}</div>
-      ${all.length ? `<div class="hist">${all.slice(0, 6).map(h => `<div>${h.g === 'uno' ? '🔴' : '🃏'} <span class="tx"><b style="color:${pcol(h.w)}">${esc(pname(h.w))}</b> ganó ${h.g === 'uno' ? (h.match ? 'la partida de UNO' : 'una ronda de UNO') : 'una chica'}${h.reto ? ` · <em>${esc(h.reto)}</em>` : ''}</span><span>${new Date(h.t).toLocaleDateString('es', { day: 'numeric', month: 'short' })}</span></div>`).join('')}</div>` : '<p class="muted" style="font-size:13px;text-align:center;margin:8px 0 0">Aquí irán todas nuestras partidas</p>'}`;
+      <div class="muted" style="font-size:13px;text-align:center;line-height:1.5">${Object.keys(GICON).filter(g => g === 'uno' || g === 'cuarenta' || all.some(h => h.g === g)).map(g => `${GNAME[g]} ${cnt(g, a)} a ${cnt(g, b)}`).join(' · ')}</div>
+      ${all.length ? `<div class="hist">${all.slice(0, 6).map(h => `<div>${GICON[h.g] || '🎲'} <span class="tx"><b style="color:${pcol(h.w)}">${esc(pname(h.w))}</b> ganó ${h.g === 'uno' ? (h.match ? 'la partida de UNO' : 'una ronda de UNO') : h.g === 'cuarenta' ? 'una chica' : `en ${esc(GNAME[h.g] || h.g)}`}${h.reto ? ` · <em>${esc(h.reto)}</em>` : ''}</span><span>${new Date(h.t).toLocaleDateString('es', { day: 'numeric', month: 'short' })}</span></div>`).join('')}</div>` : '<p class="muted" style="font-size:13px;text-align:center;margin:8px 0 0">Aquí irán todas nuestras partidas</p>'}`;
   };
   const mcard = () => {
     const el = $('#mcard'); if (!el) return;
@@ -1090,11 +1365,9 @@ function mountLobby() {
   let lastTot = null;
   const renderTeAmo = () => {
     const el = $('#teamo'); if (!el) return;
-    const wa = teamo.wa || {}, app = teamo.app || {}, [a, b] = P;
-    const cut = wa.hasta ? wa.hasta + 60000 : 0;   // lo mandado por WhatsApp antes de la última exportación ya está contado en wa
-    const live = Object.values(teamo.live || {}).filter(x => x && (!x.w || x.t > cut));
-    const nl = (p, k) => live.filter(x => x.p === p && (x.k || 'amo') === k).length + (k === 'amo' ? app[p] || 0 : 0);
-    const n = (p, k = 'amo') => (k === 'amo' ? wa[p] || 0 : wa.ex?.[p] || 0) + nl(p, k);
+    const wa = teamo.wa || {}, [a, b] = P;
+    // Solo cuenta lo que sale del chat de WhatsApp exportado. Sin botones, sin trampas 😏
+    const n = (p, k = 'amo') => k === 'amo' ? wa[p] || 0 : wa.ex?.[p] || 0;
     const tot = n(a) + n(b) + n(a, 'ex') + n(b, 'ex');
     const fmtN = v => v.toLocaleString('es');
     const dia = t => new Date(t).toLocaleDateString('es', { day: 'numeric', month: 'short', year: 'numeric' });
@@ -1111,41 +1384,853 @@ function mountLobby() {
     if (wa.first) facts.push(`El primer te amo lo dijo <b style="color:${pcol(wa.first.p)}">${esc(pname(wa.first.p))}</b> el ${dia(wa.first.t)}`);
     if (wa.firstEx) facts.push(`El primer te extraño fue de <b style="color:${pcol(wa.firstEx.p)}">${esc(pname(wa.firstEx.p))}</b> el ${dia(wa.firstEx.t)}`);
     if (wa.record) facts.push(`Récord: <b>${fmtN(wa.record.n)}</b> te amo en un solo día (${dia(wa.record.t)})`);
-    const liveN = P.reduce((s2, p) => s2 + nl(p, 'amo') + nl(p, 'ex'), 0);
-    if (wa.at) facts.push(`WhatsApp exportado hasta el ${dia(wa.hasta)}${liveN ? ` · ${liveN} más en vivo` : ''}`);
+    if (wa.at) facts.push(`Contado con nuestro chat de WhatsApp hasta el ${dia(wa.hasta)}`);
     el.innerHTML = `<div class="vsh"><span style="color:${pcol(a)}">${esc(pname(a))}</span><em>vs</em><span style="color:${pcol(b)}">${esc(pname(b))}</span></div>
       ${vsRow('amo', '💗', 'Te amo')}${vsRow('ex', '🥺', 'Te extraño')}
       ${ms.length > 1 ? `<div class="tamon">${ms.map(k => `<div><span class="cnt">${mt(k)}</span><i style="height:${Math.max(4, Math.round(mt(k) / mx * 64))}px;background:linear-gradient(${pcol(b)},${pcol(a)})"></i><small>${new Date(+k.slice(0, 4), +k.slice(5) - 1, 1).toLocaleDateString('es', { month: 'short' })}</small></div>`).join('')}</div><p class="muted" style="text-align:center;font-size:11.5px;margin:0">te amo por mes</p>` : ''}
       <p class="tainfo">${facts.length ? facts.join('<br>') : 'Conecta nuestro chat de WhatsApp para contar todos desde el primero.'}</p>
-      <div class="row"><button class="btn" id="tadi">💗 Te amo</button><button class="btn" id="taex" style="background:linear-gradient(135deg,#7b5cff,#c86bff)">🥺 Te extraño</button></div>
-      <div class="row" style="margin-top:8px"><button class="btn wa" id="tawhats">💬 Mandar por WhatsApp</button></div>
-      <div class="talinks"><button class="link" id="tawa">📲 ${wa.at ? 'Actualizar con el chat' : 'Contar todo el chat'}</button><button class="link" id="tasiri">⚡ Atajo con Siri</button></div>`;
+      <p class="tainfo" style="text-align:center">Solo cuenta lo que nos decimos de verdad en WhatsApp. Aquí no hay botones para hacer trampa 😏</p>
+      <div class="row"><button class="btn wa" id="tawa">📲 ${wa.at ? 'Actualizar con el chat' : 'Contar todo el chat'}</button></div>`;
     if (lastTot !== null && tot > lastTot) $$('.vsn b', el).forEach(x => x.classList.add('bump'));
     lastTot = tot;
-    const say = (k, w) => {
-      const t = store.now(), e = { p: me, t }; if (w) e.w = 1; if (k === 'ex') e.k = 'ex';
-      store.set(`cartas/teamo/live/${me}_${t.toString(36)}${Math.random().toString(36).slice(2, 5)}`, e);
-      store.set('cartas/react/' + me, { e: k === 'ex' ? 'teex' : 'teamo', t });
-      rain(14, k === 'ex' ? ['🥺', '💜', '🫂'] : ['💗', '❤️', '💖']); sfx.pop();
-    };
-    $('#tadi', el).onclick = () => { say('amo'); toast(`💗 Le dijiste te amo a ${pname(them)}`); };
-    $('#taex', el).onclick = () => { say('ex'); toast(`🥺 Le dijiste te extraño a ${pname(them)}`); };
-    $('#tawhats', el).onclick = () => {
-      const sh = sheet(`<h3>💬 Por WhatsApp</h3><p>Se suma al contador al instante y se abre WhatsApp con el mensaje listo.</p>
-        <div class="row"><button class="btn" data-k="amo">💗 Te amo ❤️</button><button class="btn" data-k="ex" style="background:linear-gradient(135deg,#7b5cff,#c86bff)">🥺 Te extraño</button></div>
-        <div class="row"><button class="btn ghost" data-close>Cancelar</button></div>`);
-      $$('[data-k]', sh).forEach(btn => btn.onclick = () => {
-        const k = btn.dataset.k; say(k, true); sh.remove();
-        const num = String(CONFIG.WHATSAPP?.[them] || '').replace(/\D/g, '');
-        location.href = `whatsapp://send?${num ? `phone=${num}&` : ''}text=${encodeURIComponent(k === 'ex' ? 'Te extraño 🥺' : 'Te amo ❤️')}`;
-      });
-    };
     $('#tawa', el).onclick = openWhatsApp;
-    $('#tasiri', el).onclick = openAtajo;
   };
-  clocks(); status(); renderNota(); marcador(); mcard(); renderTeAmo();
-  const iv = setInterval(clocks, 30000);
-  current = { id: 'inicio', onGames: status, onPresence: status, onNotas: renderNota, onHist: marcador, onMusic: mcard, onTeAmo: renderTeAmo, cleanup() { clearInterval(iv); } };
+  const caca = () => renderCaca($('#caca'));
+  const jgrid = () => { const el = $('#jgrid'); if (el) el.innerHTML = Object.entries(JUEGOS).map(([k, j]) => `<a class="mtile" href="#/${k}" style="--c1:${j.c1};--c2:${j.c2}">${juegoChip(k)}<span class="ic">${j.icon}</span><b>${esc(j.name)}</b><small>${esc(j.desc)}</small></a>`).join(''); };
+  const ngrid = () => { const el = $('#ngrid'); if (el) el.innerHTML = NUESTRO.map(n => `<a class="mtile" href="#/${n.id}" style="--c1:${n.c1};--c2:${n.c2}">${nuestroChip(n.id)}<span class="ic">${n.icon}</span><b>${esc(n.name)}</b><small>${esc(n.desc)}</small></a>`).join(''); };
+  const btile = () => { const el = $('#bodat'); if (el) el.innerHTML = bodaTile(); };
+  const dkey = DEMO_DAY();
+  const udq = store.on('cartas/diaria/' + dkey, v => diariaCard($('#dq'), dkey, v));
+  clocks(); status(); renderNota(); marcador(); mcard(); renderTeAmo(); caca(); jgrid(); ngrid(); btile();
+  const iv = setInterval(() => { clocks(); caca(); }, 30000);
+  current = { id: 'inicio', onGames() { status(); jgrid(); }, onPresence() { status(); jgrid(); }, onNotas: renderNota, onHist: marcador, onMusic: mcard, onTeAmo: renderTeAmo, onCacas: caca, onCartas: ngrid, onCupones: ngrid, onBoda: btile, onVernos: clocks, cleanup() { clearInterval(iv); udq(); } };
+}
+
+/* ---------- Cacómetro: cuántas veces vamos al baño ----------
+   Cada caca se guarda en cartas/cacas/<id> = { p, t, k }. El día cuenta según la hora de cada uno. */
+const CACA_TIPOS = [['ok', '😌 Normal'], ['fast', '🚀 Exprés'], ['slow', '🐢 Lenta'], ['boom', '💥 Explosiva'], ['gas', '💨 Con gases'], ['rip', '😵 Sufrida']];
+const CACA_TRONO = { sam: 'el rey', sofy: 'la reina' };
+const CACA_FRASES = ['Gia no quiere saber nada de esto 🐾', 'Lo que pasa en el baño, se cuenta aquí', 'Ciencia pura', 'El amor es contarse todo', 'Nadie gana, pero alguien va primero'];
+const cacaDay = (t, p) => { try { return new Intl.DateTimeFormat('en-CA', { timeZone: CONFIG.PLAYERS[p].tz, year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date(t)); } catch { return new Date(t).toISOString().slice(0, 10); } };
+const cacaList = () => Object.entries(cacas || {}).filter(([, v]) => v && v.p && v.t).map(([id, v]) => ({ id, ...v })).sort((a, b) => a.t - b.t);
+const hace = t => {
+  const m = Math.max(0, Math.round((store.now() - t) / 60000));
+  if (m < 1) return 'ahora mismo'; if (m < 60) return `hace ${m} min`;
+  const h = Math.round(m / 60); if (h < 24) return `hace ${h} h`;
+  const d = Math.round(h / 24); return `hace ${d} ${d === 1 ? 'día' : 'días'}`;
+};
+const dayShift = (key, n) => { const [y, m, d] = key.split('-').map(Number); const x = new Date(Date.UTC(y, m - 1, d + n)); return x.toISOString().slice(0, 10); };
+let cacaFrase = null, cacaPrev = {};
+function renderCaca(el) {
+  if (!el) return;
+  cacaFrase ??= pick(CACA_FRASES);
+  const list = cacaList(), [a, b] = P, now = store.now();
+  const of = p => list.filter(c => c.p === p);
+  const hoy = p => of(p).filter(c => cacaDay(c.t, p) === cacaDay(now, p)).length;
+  const porDia = p => of(p).reduce((m, c) => { const k = cacaDay(c.t, p); m[k] = (m[k] || 0) + 1; return m; }, {});
+  const racha = p => { const d = porDia(p); let k = cacaDay(now, p); if (!d[k]) k = dayShift(k, -1); let n = 0; while (d[k]) { n++; k = dayShift(k, -1); } return n; };
+  const record = p => Math.max(0, ...Object.values(porDia(p)));
+  const tot = p => of(p).length;
+  const last = p => of(p).pop();
+  const lead = tot(a) === tot(b) ? null : tot(a) > tot(b) ? a : b;
+
+  const col = p => {
+    const l = last(p), n = hoy(p);
+    return `<div class="cp"><div class="nm" style="color:${pcol(p)}">${lead === p ? '👑 ' : ''}${esc(pname(p))}</div>
+      <b data-cn="${p}" style="color:${pcol(p)}">${n}</b><small>hoy</small>
+      <div class="last">${l ? `última ${hace(l.t)}` : 'todavía nada'}</div></div>`;
+  };
+  // Últimos 7 días (según mi calendario)
+  const hk = cacaDay(now, me), days = Array.from({ length: 7 }, (_, i) => dayShift(hk, i - 6));
+  const da = porDia(a), db = porDia(b), mx = Math.max(1, ...days.map(k => Math.max(da[k] || 0, db[k] || 0)));
+  const wd = k => { const [y, m, d] = k.split('-').map(Number); return new Date(y, m - 1, d).toLocaleDateString('es', { weekday: 'short' }).replace('.', ''); };
+  const week = days.map(k => `<div class="${k === hk ? 'hoy' : ''}"><div class="bars"><i style="height:${Math.round((da[k] || 0) / mx * 56) || 3}px;background:${pcol(a)};opacity:${da[k] ? 1 : .25}"></i><i style="height:${Math.round((db[k] || 0) / mx * 56) || 3}px;background:${pcol(b)};opacity:${db[k] ? 1 : .25}"></i></div><small>${k === hk ? 'hoy' : wd(k)}</small></div>`).join('');
+
+  const facts = [];
+  if (list.length) {
+    facts.push(`En total: <b style="color:${pcol(a)}">${tot(a)}</b> de ${esc(pname(a))} y <b style="color:${pcol(b)}">${tot(b)}</b> de ${esc(pname(b))}`);
+    const ra = racha(a), rb = racha(b);
+    if (ra > 1 || rb > 1) facts.push(`🔥 Racha: ${esc(pname(a))} ${ra} ${ra === 1 ? 'día' : 'días'} · ${esc(pname(b))} ${rb} ${rb === 1 ? 'día' : 'días'}`);
+    const rcA = record(a), rcB = record(b);
+    if (Math.max(rcA, rcB) > 1) { const w = rcA >= rcB ? a : b; facts.push(`🏅 Récord en un día: <b>${Math.max(rcA, rcB)}</b> de ${esc(pname(w))}`); }
+    const tipos = list.filter(c => c.k).reduce((m, c) => { m[c.k] = (m[c.k] || 0) + 1; return m; }, {});
+    const top = Object.entries(tipos).sort((x, y) => y[1] - x[1])[0];
+    if (top) facts.push(`La más común: ${esc(CACA_TIPOS.find(t => t[0] === top[0])?.[1] || top[0])}`);
+  }
+  const mine = last(me), fresh = mine && now - mine.t < 15 * 60000;
+  const hist = list.slice(-5).reverse().map(c => {
+    const tipo = CACA_TIPOS.find(t => t[0] === c.k)?.[1];
+    const when = new Date(c.t).toLocaleString('es', { weekday: 'short', hour: '2-digit', minute: '2-digit', timeZone: CONFIG.PLAYERS[c.p].tz });
+    return `<div>💩 <b style="color:${pcol(c.p)}">${esc(pname(c.p))}</b>${tipo ? ` · ${esc(tipo)}` : ''}<span>${esc(when)} en ${esc(CONFIG.PLAYERS[c.p].city)}</span></div>`;
+  }).join('');
+
+  el.innerHTML = `<h3>💩 Cacómetro</h3><p class="sub">${esc(cacaFrase)}</p>
+    <div class="cvs">${col(a)}<em>🚽</em>${col(b)}</div>
+    <div class="cking">${lead ? `👑 ${esc(pname(lead))} es ${esc(CACA_TRONO[lead] || 'el amo')} del trono` : list.length ? '🤝 Empate en el trono' : 'El trono está libre'}</div>
+    <button class="cbtn" id="cadd"><span>💩</span>¡Una mierda más!</button>
+    ${fresh ? `<div class="ctype"><p>¿Cómo estuvo esa?</p><div>${CACA_TIPOS.map(([k, l]) => `<button data-ck="${k}" class="${mine.k === k ? 'on' : ''}">${esc(l)}</button>`).join('')}</div></div>` : ''}
+    <div class="cweek">${week}</div>
+    ${facts.length ? `<p class="cfacts">${facts.join('<br>')}</p>` : '<p class="cfacts">Aquí se va a contar cada visita al trono. Que empiece la competencia 🏁</p>'}
+    ${hist ? `<div class="chist">${hist}</div>` : ''}
+    ${mine && now - mine.t < 6 * 3600000 ? '<div class="talinks"><button class="link" id="cundo">↩️ Quitar mi última</button></div>' : ''}`;
+
+  for (const p of P) { const n = hoy(p); if (cacaPrev[p] !== undefined && n > cacaPrev[p]) $(`[data-cn="${p}"]`, el)?.classList.add('bump'); cacaPrev[p] = n; }
+
+  $('#cadd', el).onclick = () => {
+    const t = store.now();
+    store.set(`cartas/cacas/${me}_${t.toString(36)}${Math.random().toString(36).slice(2, 5)}`, { p: me, t });
+    rain(16, ['💩', '🧻', '🚽']); sfx.plop(); navigator.vibrate?.(60);
+    sendPush(them, '💩 Cacómetro', `${pname(me)} se acaba de echar una`, '/', 'caca');
+    const n = hoy(me) + 1;
+    toast(n === 1 ? '💩 Primera del día. ¡Bien ahí!' : `💩 Van ${n} hoy. ${n >= 4 ? '¿Estás bien? 😳' : '¡Sigue así!'}`);
+    setTimeout(() => $('#cadd')?.classList.add('go'), 0);
+  };
+  $$('[data-ck]', el).forEach(btn => btn.onclick = () => { store.update(`cartas/cacas/${mine.id}`, { k: btn.dataset.ck }); sfx.pop(); });
+  $('#cundo', el)?.addEventListener('click', () => {
+    const sh = sheet(`<h3>↩️ ¿Quitar tu última caca?</h3><p>La de ${esc(hace(mine.t))}. Se borra para los dos.</p><div class="row"><button class="btn" id="cyes">Sí, quitarla</button><button class="btn ghost" data-close>Cancelar</button></div>`);
+    $('#cyes', sh).onclick = () => { store.set(`cartas/cacas/${mine.id}`, null); sh.remove(); toast('Quitada. Aquí no pasó nada 🤫'); };
+  });
+}
+
+/* =====================================================================
+   COSAS NUESTRAS: boda, álbum, vernos, utilidades compartidas
+   ===================================================================== */
+const uid = () => store.now().toString(36) + Math.random().toString(36).slice(2, 6);
+const listOf = o => Object.entries(o || {}).filter(([, v]) => v && typeof v === 'object').map(([id, v]) => ({ id, ...v }));
+const fdate = (t, o = { day: 'numeric', month: 'short' }) => new Date(t).toLocaleDateString('es', o);
+const ymdStr = d => `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
+const daysTo = s => Math.round((ymd(s) - today0()) / dayMs);
+const DEMO_DAY = () => new Date(store.now() - 5 * 3600e3).toISOString().slice(0, 10);   // el día cambia a las 00:00 en Quito (05:00 en Londres)
+function keepDraft(el, fn) {
+  // Vuelve a dibujar sin perder lo que estabas escribiendo
+  const vals = $$('textarea[id],input[type=text][id]', el).map(x => [x.id, x.value, document.activeElement === x]);
+  fn();
+  for (const [id, v, f] of vals) { const x = $('#' + id, el); if (x && v) { x.value = v; if (f) x.focus(); } }
+}
+function confirmSheet(title, text, yes, onYes) {
+  const sh = sheet(`<h3>${title}</h3>${text ? `<p>${text}</p>` : ''}<div class="row"><button class="btn" id="cfy">${yes}</button><button class="btn ghost" data-close>Cancelar</button></div>`);
+  $('#cfy', sh).onclick = () => { sh.remove(); onYes(); };
+}
+
+/* ---------- Avisos al celular (push) ---------- */
+const PUSH = { ok: null };
+function sendPush(to, title, body, url = '/', tag) {
+  if (store.mode !== 'firebase' || (presence[to]?.on && presence[to]?.at)) return;   // si está con la app abierta ya lo ve en vivo
+  fetch('/api/push', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ room: CONFIG.ROOM, to, title, body, url, tag }) }).catch(() => {});
+}
+const b64u = s => { const p = '='.repeat((4 - s.length % 4) % 4), b = atob((s + p).replace(/-/g, '+').replace(/_/g, '/')); return Uint8Array.from(b, c => c.charCodeAt(0)); };
+async function swReg() { if (!('serviceWorker' in navigator)) return null; try { return await navigator.serviceWorker.register('sw.js'); } catch { return null; } }
+async function openAvisos() {
+  const reg = await swReg();
+  const supported = !!(reg && 'PushManager' in window && 'Notification' in window);
+  const standalone = matchMedia('(display-mode: standalone)').matches || navigator.standalone;
+  const sub = supported ? await reg.pushManager.getSubscription().catch(() => null) : null;
+  const sh = sheet(`<h3>🔔 Avisos al celular</h3>
+    <p>Te llega un aviso cuando ${esc(pname(them))} juega su turno, te escribe una carta, te regala un vale, responde la pregunta del día o... se echa una 💩.</p>
+    ${!supported ? `<div class="warn">${/iPhone|iPad/.test(navigator.userAgent) && !standalone ? 'En iPhone primero abre la app desde el ícono de la pantalla de inicio: en Safari toca Compartir › <b>Añadir a pantalla de inicio</b>, y ábrela desde ahí.' : 'Este navegador no puede recibir avisos.'}</div>` : ''}
+    <p id="avst" style="text-align:center;font-weight:900">${sub ? '✅ Activados en este celular' : supported ? 'Todavía no están activados aquí' : ''}</p>
+    <div class="row">${supported ? `<button class="btn" id="avon">${sub ? '🔁 Volver a activar' : '🔔 Activar avisos'}</button>` : ''}${sub ? '<button class="btn ghost" id="avtest">Mandarme uno de prueba</button>' : ''}<button class="btn ghost" data-close>Cerrar</button></div>`);
+  $('#avon', sh)?.addEventListener('click', async () => {
+    const st = $('#avst', sh);
+    try {
+      if (await Notification.requestPermission() !== 'granted') { st.textContent = 'No diste permiso. Puedes darlo en Ajustes › Notificaciones.'; return; }
+      const r = await fetch('/api/push'); const { key } = r.ok ? await r.json() : {};
+      if (!key) { st.innerHTML = 'Falta configurar las claves en Netlify (mira el LEEME).'; return; }
+      const s = await reg.pushManager.subscribe({ userVisibleOnly: true, applicationServerKey: b64u(key) });
+      const id = (await sha(s.endpoint)).slice(0, 16);
+      await store.set(`push/${me}/${id}`, { sub: s.toJSON(), t: store.now(), ua: navigator.userAgent.slice(0, 80) });
+      st.textContent = '✅ ¡Listo! Avisos activados'; sfx.pop();
+    } catch (e) { console.error(e); st.textContent = 'No se pudo activar: ' + (e.message || e); }
+  });
+  $('#avtest', sh)?.addEventListener('click', () => {
+    fetch('/api/push', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify({ room: CONFIG.ROOM, to: me, title: 'Nuestra App', body: `Así te van a llegar los avisos, ${pname(me)} 💜`, url: '/' }) })
+      .then(r => toast(r.ok ? 'Aviso enviado 🔔' : 'Netlify no pudo enviarlo. Revisa las claves.')).catch(() => toast('No se pudo conectar con Netlify'));
+  });
+}
+
+/* ---------- Fotos (álbum y tablero de la boda) ----------
+   Se comprimen en el teléfono y se guardan en la misma base de datos. */
+async function compressImg(file, max = 1100) {
+  const url = URL.createObjectURL(file);
+  try {
+    const img = await new Promise((res, rej) => { const i = new Image(); i.onload = () => res(i); i.onerror = rej; i.src = url; });
+    const s = Math.min(1, max / Math.max(img.naturalWidth, img.naturalHeight));
+    const cv = document.createElement('canvas'); cv.width = Math.round(img.naturalWidth * s); cv.height = Math.round(img.naturalHeight * s);
+    cv.getContext('2d').drawImage(img, 0, 0, cv.width, cv.height);
+    let d = cv.toDataURL('image/jpeg', .72); if (d.length > 420000) d = cv.toDataURL('image/jpeg', .5);
+    return d;
+  } finally { URL.revokeObjectURL(url); }
+}
+function photoBoard(el, { path, cats, title, empty, both = '💞 A los dos nos encanta' }) {
+  let fotos = {}, filtro = 'todas';
+  const catOf = id => cats?.find(c => c[0] === id);
+  const draw = () => {
+    const list = listOf(fotos).filter(f => typeof f.img === 'string' && f.img.startsWith('data:image/')).sort((a, b) => b.t - a.t);
+    const two = f => P.every(p => f.love?.[p]);
+    const shown = filtro === 'todas' ? list : filtro === 'amor' ? list.filter(two) : list.filter(f => f.cat === filtro);
+    const usedCats = cats ? cats.filter(c => list.some(f => f.cat === c[0])) : [];
+    el.innerHTML = `<div class="pbh"><h3>${title}</h3><label class="btn sm">📷 Añadir<input type="file" accept="image/*" multiple hidden id="pfile"></label></div>
+      ${list.length ? `<div class="pcats"><button data-f="todas" class="${filtro === 'todas' ? 'on' : ''}">Todas · ${list.length}</button><button data-f="amor" class="${filtro === 'amor' ? 'on' : ''}">💞 Las dos</button>${usedCats.map(c => `<button data-f="${c[0]}" class="${filtro === c[0] ? 'on' : ''}">${c[1]} ${esc(c[2])}</button>`).join('')}</div>` : ''}
+      <div class="pgrid">${shown.map(f => `<button class="pph" data-id="${f.id}"><img src="${f.img}" alt="" loading="lazy">${catOf(f.cat) ? `<span>${catOf(f.cat)[1]}</span>` : ''}${two(f) ? '<em>💞</em>' : f.love?.[me] ? '<em>❤️</em>' : ''}</button>`).join('')}</div>
+      ${shown.length ? '' : `<p class="muted pempty">${list.length ? 'Nada en esta categoría todavía' : empty}</p>`}`;
+    $$('[data-f]', el).forEach(b => b.onclick = () => { filtro = b.dataset.f; draw(); });
+    $$('[data-id]', el).forEach(b => b.onclick = () => view1(b.dataset.id));
+    $('#pfile', el).onchange = e => addFiles([...e.target.files]);
+  };
+  const addFiles = async files => {
+    if (!files.length) return;
+    let cat = cats ? cats[0][0] : '';
+    const sh = sheet(`<h3>📷 ${files.length === 1 ? 'Nueva foto' : files.length + ' fotos nuevas'}</h3><div class="pprev" id="pv"><p class="muted">Gia está preparando las fotos... 🐾</p></div>
+      ${cats ? `<h4>¿De qué es?</h4><div class="pcats" id="pc">${cats.map(c => `<button data-c="${c[0]}" class="${c[0] === cat ? 'on' : ''}">${c[1]} ${esc(c[2])}</button>`).join('')}</div>` : ''}
+      <input type="text" id="pn" maxlength="140" placeholder="Una nota (opcional)">
+      <div class="row"><button class="btn" id="pok" disabled>Guardar</button><button class="btn ghost" data-close>Cancelar</button></div>`);
+    $$('[data-c]', sh).forEach(b => b.onclick = () => { cat = b.dataset.c; $$('[data-c]', sh).forEach(x => x.classList.toggle('on', x === b)); });
+    const imgs = [];
+    for (const f of files.slice(0, 12)) { try { imgs.push(await compressImg(f)); } catch (e) { console.error(e); } }
+    if (!imgs.length) { $('#pv', sh).innerHTML = '<div class="warn">No pude abrir esas fotos.</div>'; return; }
+    $('#pv', sh).innerHTML = imgs.map(d => `<img src="${d}" alt="">`).join('');
+    $('#pok', sh).disabled = false;
+    $('#pok', sh).onclick = () => {
+      const nota = $('#pn', sh).value.trim(), t = store.now();
+      imgs.forEach((img, i) => store.set(`${path}/${uid()}${i}`, { p: me, t: t + i, img, cat, nota }));
+      sh.remove(); sfx.pop(); toast(imgs.length === 1 ? '📷 Foto guardada' : `📷 ${imgs.length} fotos guardadas`);
+    };
+  };
+  const view1 = id => {
+    const f = fotos[id]; if (!f) return;
+    const c = catOf(f.cat);
+    const sh = sheet(`<div class="pview"><img src="${f.img}" alt=""></div>
+      ${f.nota ? `<p style="font:600 22px/1.2 var(--fs);color:var(--text);margin:10px 0 4px">${esc(f.nota)}</p>` : ''}
+      <p class="muted" style="font-size:12.5px;margin:4px 0">${c ? `${c[1]} ${esc(c[2])} · ` : ''}La subió ${esc(pname(f.p))} el ${fdate(f.t)}${P.every(p => f.love?.[p]) ? ` · ${both}` : ''}</p>
+      <div class="row"><button class="btn sm" id="plv">${f.love?.[me] ? '❤️ Me encanta' : '🤍 Me encanta'}</button><button class="btn sm ghost" id="ped">✏️ Nota</button><button class="btn sm ghost" id="pdel">🗑️</button><button class="btn sm ghost" data-close>Cerrar</button></div>`);
+    $('#plv', sh).onclick = () => { store.set(`${path}/${id}/love/${me}`, f.love?.[me] ? null : true); sh.remove(); if (!f.love?.[me]) { sfx.pop(); flyE('❤️'); } };
+    $('#ped', sh).onclick = () => { sh.remove(); const s2 = sheet(`<h3>✏️ Nota</h3><input type="text" id="pn2" maxlength="140" value="${esc(f.nota || '')}"><div class="row"><button class="btn" id="pk2">Guardar</button><button class="btn ghost" data-close>Cancelar</button></div>`); $('#pk2', s2).onclick = () => { store.set(`${path}/${id}/nota`, $('#pn2', s2).value.trim()); s2.remove(); }; };
+    $('#pdel', sh).onclick = () => { sh.remove(); confirmSheet('🗑️ ¿Borrar esta foto?', 'Se borra para los dos.', 'Sí, borrar', () => { store.set(`${path}/${id}`, null); toast('Foto borrada'); }); };
+  };
+  const unsub = store.on(path, v => { fotos = v || {}; draw(); });
+  return unsub;
+}
+
+/* ---------- Lista con casillas (pendientes de la boda) ---------- */
+function checkList(el, { path, title, placeholder, empty }) {
+  let items = {};
+  const draw = () => keepDraft(el, () => {
+    const list = listOf(items).sort((a, b) => (!!a.hecho - !!b.hecho) || a.t - b.t);
+    const done = list.filter(x => x.hecho).length;
+    el.innerHTML = `<h3>${title} ${list.length ? `<small class="muted" style="font:800 13px var(--fb)">${done} de ${list.length}</small>` : ''}</h3>
+      ${list.length ? `<div class="tabar" style="margin:6px 0 4px"><i style="width:${Math.round(done / list.length * 100)}%;background:linear-gradient(90deg,var(--ok),#25c2a0)"></i></div>` : ''}
+      <div class="clist">${list.map(x => `<div class="citem ${x.hecho ? 'done' : ''}"><button class="ck" data-ck="${x.id}">${x.hecho ? '✓' : ''}</button><div class="tx">${esc(x.texto)}<small>${esc(pname(x.de))}${x.hecho ? ` · listo el ${fdate(x.hecho)}` : ''}</small></div><button class="x" data-del="${x.id}" aria-label="Borrar">✕</button></div>`).join('')}</div>
+      ${list.length ? '' : `<p class="muted" style="font-size:13.5px;margin:6px 0 0">${empty}</p>`}
+      <div class="addrow"><input class="inp" type="text" id="cl-${path.replace(/\W/g, '')}" maxlength="120" placeholder="${esc(placeholder)}"><button class="btn sm" data-add>Añadir</button></div>`;
+    const inp = $('input', el);
+    const add = () => { const v = inp.value.trim(); if (!v) return; store.set(`${path}/${uid()}`, { texto: v, de: me, t: store.now() }); inp.value = ''; sfx.pop(); };
+    $('[data-add]', el).onclick = add; inp.onkeydown = e => { if (e.key === 'Enter') add(); };
+    $$('[data-ck]', el).forEach(b => b.onclick = () => { const x = items[b.dataset.ck]; store.set(`${path}/${b.dataset.ck}/hecho`, x.hecho ? null : store.now()); if (!x.hecho) { sfx.pop(); flyE('✅'); } });
+    $$('[data-del]', el).forEach(b => b.onclick = () => store.set(`${path}/${b.dataset.del}`, null));
+  });
+  return store.on(path, v => { items = v || {}; draw(); });
+}
+
+/* ---------- Nuestra boda ---------- */
+let boda = {};
+const BODA_CATS = [['vestido', '👗', 'Vestido'], ['traje', '🤵', 'Traje'], ['lugar', '🏛️', 'Lugar'], ['deco', '🎨', 'Decoración'], ['flores', '💐', 'Flores'], ['pastel', '🎂', 'Pastel'], ['anillos', '💍', 'Anillos'], ['comida', '🍽️', 'Comida'], ['musica', '🎶', 'Música'], ['luna', '🌴', 'Luna de miel'], ['otros', '✨', 'Otras ideas']];
+function bodaCount() {
+  if (!boda?.fecha) return null;
+  const d = daysTo(boda.fecha), t = today0(), f = ymd(boda.fecha);
+  let m = (f.getFullYear() - t.getFullYear()) * 12 + f.getMonth() - t.getMonth(); if (f.getDate() < t.getDate()) m--;
+  const rest = Math.round((f - new Date(t.getFullYear(), t.getMonth() + Math.max(0, m), t.getDate())) / dayMs);
+  return { d, m: Math.max(0, m), rest, sem: Math.floor(d / 7) };
+}
+function editBoda() {
+  const sh = sheet(`<h3>💍 Nuestra boda</h3><p>La fecha y el lugar los ven los dos.</p>
+    <h4>Fecha</h4><input type="date" id="bf" value="${esc(boda?.fecha || '')}">
+    <h4>Lugar</h4><input type="text" id="bl" maxlength="80" placeholder="Por ejemplo: Quito, en una hacienda" value="${esc(boda?.lugar || '')}">
+    <div class="row"><button class="btn" id="bok">Guardar</button>${boda?.fecha ? '<button class="btn ghost" id="bno">Quitar fecha</button>' : ''}<button class="btn ghost" data-close>Cancelar</button></div>`);
+  $('#bok', sh).onclick = () => {
+    const fecha = $('#bf', sh).value, lugar = $('#bl', sh).value.trim();
+    store.set('cartas/boda/info', { fecha: /^\d{4}-\d{2}-\d{2}$/.test(fecha) ? fecha : '', lugar, by: me, t: store.now() });
+    sh.remove(); if (fecha) { confetti(); sfx.win(); toast('💍 ¡Fecha guardada!'); }
+  };
+  $('#bno', sh)?.addEventListener('click', () => { store.set('cartas/boda/info/fecha', ''); sh.remove(); });
+}
+function bodaTile() {
+  const c = bodaCount();
+  return `<a class="bodat" href="#/boda"><span class="ring">💍</span><div style="flex:1"><div class="t">Nuestra boda</div>
+    ${c ? (c.d > 0 ? `<b>${c.d.toLocaleString('es')} días</b><small>para decir "sí, acepto" · ${fdate(ymd(boda.fecha), { day: 'numeric', month: 'long', year: 'numeric' })}</small>` : c.d === 0 ? '<b>¡Es hoy!</b><small>Hoy nos casamos 💍</small>' : `<b>Casados</b><small>hace ${(-c.d).toLocaleString('es')} días 💞</small>`) : '<small>Ponle fecha y empieza a guardar ideas, fotos y pendientes</small>'}
+    </div><span style="font-size:22px">›</span></a>`;
+}
+function mountBoda() {
+  renderTop('Nuestra boda');
+  view.innerHTML = `<section class="boda" id="bhero"></section><div class="card" id="bfotos"></div><div class="card" id="btareas"></div>`;
+  const hero = () => {
+    const c = bodaCount(), el = $('#bhero'); if (!el) return;
+    el.innerHTML = `<span class="ring">💍</span><h1>${esc(pname(P[0]))} & ${esc(pname(P[1]))}</h1>
+      ${c ? (c.d > 0 ? `<div class="l">Faltan</div><div class="n">${c.d.toLocaleString('es')}</div><div class="l">${c.d === 1 ? 'día' : 'días'} para casarnos</div>
+        <div class="units"><div><b>${c.m}</b><small>${c.m === 1 ? 'mes' : 'meses'}</small></div><div><b>${c.rest}</b><small>${c.rest === 1 ? 'día' : 'días'}</small></div><div><b>${c.sem}</b><small>semanas</small></div></div>`
+        : c.d === 0 ? '<div class="n" style="font-size:44px">¡Hoy nos casamos!</div>' : `<div class="l">Casados hace</div><div class="n">${(-c.d).toLocaleString('es')}</div><div class="l">días 💞</div>`)
+        : '<div class="l" style="margin:10px 0 4px">Todavía no tenemos fecha</div><div class="sub2">Pónganla cuando la decidan y empieza la cuenta regresiva</div>'}
+      ${c ? `<div class="when">📅 ${fdate(ymd(boda.fecha), { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' })}</div>` : ''}
+      ${boda?.lugar ? `<div class="sub2">📍 ${esc(boda.lugar)}</div>` : ''}
+      <div><button class="edit" id="bedit">${c ? '✏️ Cambiar fecha o lugar' : '💍 Poner la fecha'}</button></div>`;
+    $('#bedit').onclick = editBoda;
+    if (c?.d === 0 && !hero.done) { hero.done = 1; confetti(4000); }
+  };
+  hero();
+  const u1 = photoBoard($('#bfotos'), { path: 'cartas/fotos/boda', cats: BODA_CATS, title: '📸 Ideas para la boda', empty: 'Guarda aquí fotos de vestidos, lugares, flores, pasteles y todo lo que nos guste. Toca ❤️ en las que te encanten.' });
+  const u2 = checkList($('#btareas'), { path: 'cartas/boda/tareas', title: '📝 Pendientes', placeholder: 'Por ejemplo: visitar el lugar', empty: 'Lo que tenemos que hacer para la boda.' });
+  current = { id: 'boda', onBoda: hero, cleanup() { u1(); u2(); } };
+}
+
+/* ---------- Álbum ---------- */
+const ALBUM_CATS = [['nos', '💑', 'Nosotros'], ['gia', '🐶', 'Gia'], ['lugares', '🌍', 'Lugares'], ['comida', '🍓', 'Comida'], ['risas', '😂', 'Risas'], ['otros', '✨', 'Otras']];
+function mountAlbum() {
+  renderTop('Nuestro álbum');
+  view.innerHTML = `<div class="card" id="alb" style="margin-top:4px"></div>`;
+  const u = photoBoard($('#alb'), { path: 'cartas/fotos/album', cats: ALBUM_CATS, title: '📸 Nuestro álbum', empty: 'Aquí van nuestras fotos: capturas de llamadas, Gia, lo que comemos, lo que vemos. Las ven los dos.' });
+  current = { id: 'album', cleanup() { u(); } };
+}
+
+/* ---------- Cuenta regresiva para vernos ---------- */
+let vernos = {};
+function vernosBtn() {
+  const f = vernos?.fecha, d = f ? daysTo(f) : null;
+  if (d == null || d < 0) return `<button class="vernos" id="vernos">✈️ ¿Cuándo nos vemos? <b>Pon la fecha</b></button>`;
+  if (d === 0) return `<button class="vernos hoy" id="vernos">✈️ <b>¡Hoy nos vemos!</b> 🥹💜</button>`;
+  return `<button class="vernos" id="vernos">✈️ Nos vemos en <b>${d.toLocaleString('es')} ${d === 1 ? 'día' : 'días'}</b> · ${fdate(ymd(f), { day: 'numeric', month: 'long' })}</button>`;
+}
+function editVernos() {
+  const sh = sheet(`<h3>✈️ ¿Cuándo nos vemos?</h3><p>La fecha en la que por fin estemos juntos.</p><input type="date" id="vf" value="${esc(vernos?.fecha || '')}">
+    <div class="row"><button class="btn" id="vok">Guardar</button>${vernos?.fecha ? '<button class="btn ghost" id="vno">Quitar</button>' : ''}<button class="btn ghost" data-close>Cancelar</button></div>`);
+  $('#vok', sh).onclick = () => { const v = $('#vf', sh).value; if (!v) return toast('Elige una fecha'); store.set('cartas/vernos', { fecha: v, by: me, t: store.now() }); sh.remove(); rain(16, ['✈️', '💜', '🥹', '💗']); sfx.pop(); };
+  $('#vno', sh)?.addEventListener('click', () => { store.set('cartas/vernos', null); sh.remove(); });
+}
+
+/* =====================================================================
+   JUEGOS NUEVOS: Tres en raya, Conecta 4, Memoria, Ahorcado
+   Todos por turnos en cartas/j/<juego>, con marcador por rondas.
+   ===================================================================== */
+const JUEGOS = {
+  tres: { name: 'Tres en raya', icon: '⭕', desc: 'Tres en línea gana', c1: '#ff4fa3', c2: '#9d6bff' },
+  c4: { name: 'Conecta 4', icon: '🟡', desc: 'Cuatro seguidas gana', c1: '#3a7ce0', c2: '#25c2a0' },
+  memoria: { name: 'Memoria', icon: '🧠', desc: 'Encuentra las parejas', c1: '#ff7a2d', c2: '#ffb020' },
+  ahorcado: { name: 'Ahorcado', icon: '🎈', desc: 'Adivina mi palabra', c1: '#9d6bff', c2: '#3a7ce0' },
+};
+Object.assign(GNAME, Object.fromEntries(Object.entries(JUEGOS).map(([k, v]) => [k, v.name])));
+const GICON = { uno: '🔴', cuarenta: '🃏', tres: '⭕', c4: '🟡', memoria: '🧠', ahorcado: '🎈' };
+const jgames = {};
+const zero = () => ({ [P[0]]: 0, [P[1]]: 0 });
+const turnTxt = st => st.turn === me ? '¡Te toca! 🐾' : `Turno de ${esc(pname(them))}...`;
+function gHead(st, extra = () => '') {
+  return `<div class="ghead">${P.map(p => `<div class="gp ${st && !st.winner && st.turn === p ? 'on' : ''}" style="--c:${pcol(p)}"><div><b>${esc(pname(p))}</b>${extra(p) ? `<small>${extra(p)}</small>` : ''}</div><span>${st?.score?.[p] || 0}</span></div>`).join('<em>vs</em>')}</div>`;
+}
+const winBox = (st, msg = '') => !st.winner ? '' : `<div class="gwin">${st.winner === 'empate' ? '🤝 ¡Empate!' : st.winner === me ? '🎉 ¡Ganaste!' : `💜 Ganó ${esc(pname(st.winner))}`}${msg ? `<p>${msg}</p>` : ''}<button class="btn" data-next>Otra ronda</button></div>`;
+function mountTurnGame(g, { init, draw, rules }) {
+  renderTop(GNAME[g], `<button class="ib" id="menu" aria-label="Reglas">?</button>`);
+  view.innerHTML = `<div id="g"></div><div class="narr" id="gn"></div>${reactBar()}`;
+  const path = 'cartas/j/' + g, el = $('#g');
+  let st = null, prevTurn = null, winShown = null, first = true;
+  const act = fn => store.tx(path, cur => cur ? (fn(clone(cur)) ?? undefined) : undefined).then(r => {
+    if (r.committed && r.value?.winner && r.value.winner !== 'empate') recordWin(g, r.value);
+    return r;
+  });
+  const next = () => act(cur => cur.winner ? init(cur) : undefined);
+  const render = () => {
+    if (!st) return;
+    draw(el, st, act);
+    $('[data-next]', el)?.addEventListener('click', next);
+    narrate($('#gn'), st.winner ? (st.winner === me ? '¡Ganaste! Gia está orgullosa 🐾' : st.winner === 'empate' ? 'Empate. Nadie le gana a nadie 💜' : `Ganó ${esc(pname(st.winner))}. La próxima es tuya 🐾`) : turnTxt(st), st.winner === me);
+  };
+  const unsub = store.on(path, v => {
+    if (!v) { store.tx(path, c => c ? undefined : init(null)); return; }
+    st = v;
+    if (!st.winner && st.turn === me && prevTurn !== null && prevTurn !== me) { sfx.turn(); navigator.vibrate?.(60); }
+    if (st.winner && winShown !== st.n && !first) {
+      if (st.winner === me) { confetti(); sfx.win(); } else if (st.winner === 'empate') sfx.pop(); else { rain(16, ['💜', '💗', '🐾']); sfx.sad(); }
+    }
+    winShown = st.winner ? st.n : null; prevTurn = st.turn; first = false;
+    render();
+  });
+  $('#menu').onclick = () => sheet(`<h3>${JUEGOS[g].icon} ${GNAME[g]}</h3>${rules}<div class="row"><button class="btn ghost" data-close>Entendido</button></div>`);
+  current = { id: g, onPresence() {}, cleanup() { unsub(); } };
+}
+
+/* ---------- Tres en raya ---------- */
+const T3 = [[0, 1, 2], [3, 4, 5], [6, 7, 8], [0, 3, 6], [1, 4, 7], [2, 5, 8], [0, 4, 8], [2, 4, 6]];
+function mountTres() {
+  const init = prev => { const first = prev ? other(prev.first) : pick(P); return { b: '.........', first, turn: first, n: (prev?.n || 0) + 1, winner: '', line: '', last: -1, score: prev?.score || zero() }; };
+  const sym = (st, p) => p === st.first ? '✕' : '◯';
+  mountTurnGame('tres', {
+    init,
+    rules: '<ul><li>Empieza quien tiene la ✕. En cada ronda empieza el otro.</li><li>Gana quien hace tres en línea: horizontal, vertical o diagonal.</li></ul>',
+    draw(el, st, act) {
+      const line = String(st.line || '').split(',').filter(Boolean).map(Number), owner = c => c === 'x' ? st.first : other(st.first);
+      el.innerHTML = gHead(st, p => `juega con ${sym(st, p)}`) + `<div class="t3">${[...st.b].map((c, i) => `<button data-i="${i}" class="${line.includes(i) ? 'w' : ''} ${i === st.last ? 'new' : ''}" style="--c:${c === '.' ? 'var(--line)' : pcol(owner(c))};color:var(--c)">${c === '.' ? '' : c === 'x' ? '✕' : '◯'}</button>`).join('')}</div>` + winBox(st);
+      $$('[data-i]', el).forEach(b => b.onclick = () => {
+        const i = +b.dataset.i;
+        if (st.turn !== me || st.winner) return toast(st.winner ? 'Toca "Otra ronda"' : `Espera, le toca a ${pname(them)}`);
+        act(cur => {
+          if (cur.winner || cur.turn !== me || cur.b[i] !== '.') return;
+          const s = me === cur.first ? 'x' : 'o';
+          cur.b = cur.b.slice(0, i) + s + cur.b.slice(i + 1); cur.last = i;
+          const L = T3.find(l => l.every(k => cur.b[k] === s));
+          if (L) { cur.winner = me; cur.line = L.join(','); cur.score = cur.score || zero(); cur.score[me] = (cur.score[me] || 0) + 1; }
+          else if (!cur.b.includes('.')) cur.winner = 'empate';
+          else cur.turn = other(me);
+          return cur;
+        }).then(() => sfx.card());
+      });
+    },
+  });
+}
+
+/* ---------- Conecta 4 ---------- */
+const c4Win = (b, i, ch) => {
+  const r0 = Math.floor(i / 7), c0 = i % 7;
+  for (const [dr, dc] of [[0, 1], [1, 0], [1, 1], [1, -1]]) {
+    const cells = [i];
+    for (const s of [1, -1]) { let r = r0 + dr * s, c = c0 + dc * s; while (r >= 0 && r < 6 && c >= 0 && c < 7 && b[r * 7 + c] === ch) { cells.push(r * 7 + c); r += dr * s; c += dc * s; } }
+    if (cells.length >= 4) return cells;
+  }
+  return null;
+};
+function mountC4() {
+  const init = prev => { const first = prev ? other(prev.first) : pick(P); return { b: '.'.repeat(42), first, turn: first, n: (prev?.n || 0) + 1, winner: '', line: '', last: -1, score: prev?.score || zero() }; };
+  const chOf = p => p === P[0] ? 'a' : 'b', pOf = ch => ch === 'a' ? P[0] : P[1];
+  mountTurnGame('c4', {
+    init,
+    rules: '<ul><li>Toca una columna para dejar caer tu ficha.</li><li>Gana quien junta cuatro seguidas: horizontal, vertical o en diagonal.</li><li>En cada ronda empieza el otro.</li></ul>',
+    draw(el, st, act) {
+      const line = String(st.line || '').split(',').filter(Boolean).map(Number);
+      el.innerHTML = gHead(st, p => `<i class="dot" style="background:${pcol(p)}"></i> fichas`) + `<div class="c4">${[...st.b].map((c, i) => `<i data-c="${i % 7}" class="${c !== '.' ? 'p' : ''} ${line.includes(i) ? 'w' : ''} ${i === st.last ? 'new' : ''}" style="${c !== '.' ? `--c:${pcol(pOf(c))};` : ''}--r:${Math.floor(i / 7) + 1}"></i>`).join('')}</div>` + winBox(st);
+      $$('[data-c]', el).forEach(b => b.onclick = () => {
+        const col = +b.dataset.c;
+        if (st.turn !== me || st.winner) return toast(st.winner ? 'Toca "Otra ronda"' : `Espera, le toca a ${pname(them)}`);
+        act(cur => {
+          if (cur.winner || cur.turn !== me) return;
+          let i = -1; for (let r = 5; r >= 0; r--) if (cur.b[r * 7 + col] === '.') { i = r * 7 + col; break; }
+          if (i < 0) return;
+          const ch = chOf(me); cur.b = cur.b.slice(0, i) + ch + cur.b.slice(i + 1); cur.last = i;
+          const L = c4Win(cur.b, i, ch);
+          if (L) { cur.winner = me; cur.line = L.join(','); cur.score = cur.score || zero(); cur.score[me] = (cur.score[me] || 0) + 1; }
+          else if (!cur.b.includes('.')) cur.winner = 'empate';
+          else cur.turn = other(me);
+          return cur;
+        }).then(r => { if (r.committed) sfx.card(); else toast('Esa columna está llena'); });
+      });
+    },
+  });
+}
+
+/* ---------- Memoria ---------- */
+const MEM_EMO = ['💗', '🌹', '🐶', '💍', '✈️', '🍫', '🌙', '🎵', '🍓', '🧸', '🌻', '💌', '🦋', '🍕', '☕', '🌈', '🎂', '⭐'];
+function mountMemoria() {
+  const init = prev => {
+    const first = prev ? other(prev.first) : pick(P);
+    const ids = R.shuffle([...MEM_EMO.keys()]).slice(0, 8), cards = R.shuffle([...ids, ...ids]);
+    return { c: cards.join(','), f: '.'.repeat(16), o: '', m: '', mt: 0, first, turn: first, n: (prev?.n || 0) + 1, winner: '', score: prev?.score || zero() };
+  };
+  const pairs = (st, p) => [...st.f].filter(x => x === (p === P[0] ? 'a' : 'b')).length / 2;
+  let builtN = null;
+  const M = { st: null, t: 0 };
+  mountTurnGame('memoria', {
+    init,
+    rules: '<ul><li>Voltea dos cartas. Si son iguales, son tuyas y vuelves a jugar.</li><li>Si no, se dan la vuelta y le toca al otro. ¡Fíjate bien en las que voltea!</li><li>Gana quien encuentre más parejas.</li></ul>',
+    draw: function drawM(el, st, act) {
+      M.st = st;
+      const c = String(st.c).split(','), open = String(st.o || '').split(',').filter(Boolean).map(Number), miss = String(st.m || '').split(',').filter(Boolean).map(Number);
+      const showMiss = miss.length && store.now() - (st.mt || 0) < 1700;
+      if (builtN !== st.n || !$('.mem', el)) {
+        builtN = st.n;
+        el.innerHTML = `<div id="mh"></div><div class="mem">${c.map((x, i) => `<button class="mc" data-i="${i}"><div><span class="bk">🐾</span><span class="f">${MEM_EMO[+x]}</span></div></button>`).join('')}</div><div id="mw"></div>`;
+        $$('[data-i]', el).forEach(b => b.onclick = () => {
+          const i = +b.dataset.i, cur0 = M.st;
+          if (!cur0 || cur0.turn !== me || cur0.winner) return toast(cur0?.winner ? 'Toca "Otra ronda"' : `Espera, le toca a ${pname(them)}`);
+          act(cur => {
+            if (cur.winner || cur.turn !== me) return;
+            const o = String(cur.o || '').split(',').filter(Boolean).map(Number);
+            if (cur.f[i] !== '.' || o.includes(i)) return;
+            const cc = String(cur.c).split(',');
+            cur.m = '';
+            if (!o.length) { cur.o = String(i); return cur; }
+            const j = o[0]; cur.o = '';
+            if (cc[i] === cc[j]) {
+              const ch = me === P[0] ? 'a' : 'b', nf = [...cur.f]; nf[i] = nf[j] = ch; cur.f = nf.join('');
+              if (!cur.f.includes('.')) {
+                const na = [...cur.f].filter(x => x === 'a').length, nb = 16 - na;
+                cur.winner = na === nb ? 'empate' : na > nb ? P[0] : P[1];
+                if (cur.winner !== 'empate') { cur.score = cur.score || zero(); cur.score[cur.winner] = (cur.score[cur.winner] || 0) + 1; }
+              }
+            } else { cur.m = `${j},${i}`; cur.mt = store.now(); cur.turn = other(me); }
+            return cur;
+          }).then(r => { if (r.committed) { sfx.card(); const v = r.value; if (v && !v.o && !v.m && !v.winner) sfx.pop(); } });
+        });
+      }
+      $('#mh', el).innerHTML = gHead(st, p => `${pairs(st, p)} ${pairs(st, p) === 1 ? 'pareja' : 'parejas'}`);
+      $$('.mc', el).forEach((b, i) => {
+        const got = st.f[i] !== '.';
+        b.classList.toggle('up', got || open.includes(i) || (showMiss && miss.includes(i)));
+        b.classList.toggle('got', got); b.style.setProperty('--c', got ? pcol(st.f[i] === 'a' ? P[0] : P[1]) : 'transparent');
+      });
+      $('#mw', el).innerHTML = winBox(st, st.winner ? `${esc(pname(P[0]))} ${pairs(st, P[0])} · ${esc(pname(P[1]))} ${pairs(st, P[1])}` : '');
+      clearTimeout(M.t); if (showMiss) M.t = setTimeout(() => { if (el.isConnected && M.st === st) drawM(el, st, act); }, 1750);
+    },
+  });
+}
+
+/* ---------- Ahorcado (con globos para Gia) ---------- */
+const AH_ABC = [...'ABCDEFGHIJKLMNÑOPQRSTUVWXYZ'];
+const ahN = ch => ch === 'Ñ' ? 'Ñ' : ch.normalize('NFD').replace(/[̀-ͯ]/g, '');
+const ahLetters = w => [...String(w).toUpperCase()].map(ahN).filter(ch => AH_ABC.includes(ch));
+function mountAhorcado() {
+  const init = prev => { const setter = prev ? other(prev.setter) : pick(P); return { setter, turn: setter, word: '', pista: '', g: '', fails: 0, n: (prev?.n || 0) + 1, winner: '', score: prev?.score || zero() }; };
+  mountTurnGame('ahorcado', {
+    init,
+    rules: '<ul><li>Uno escribe una palabra o frase secreta (puede ser algo nuestro) y una pista.</li><li>El otro adivina letra por letra. Cada letra que no está revienta un globo de Gia 🎈.</li><li>Si revientan los 6 globos, gana quien puso la palabra. En cada ronda se cambian los papeles.</li></ul>',
+    draw(el, st, act) {
+      const guesser = other(st.setter), g = String(st.g || ''), fails = st.fails || 0;
+      const balloons = `<div class="ah-b">${Array.from({ length: 6 }, (_, i) => `<span class="${i < fails ? 'bang' : ''}" style="animation-delay:${i * .3}s">${i < fails ? '💥' : '🎈'}</span>`).join('')}</div><img class="ah-g ${st.winner && st.winner === st.setter ? 'fall' : ''}" src="img/gia.jpg" alt="Gia">`;
+      if (!st.word) {
+        el.innerHTML = gHead(st, p => p === st.setter ? 'pone la palabra' : 'adivina') + balloons + (st.setter === me
+          ? `<div class="card" style="margin-top:14px"><h3>🤫 Escribe tu palabra secreta</h3><p class="muted" style="font-size:13px;margin:0 0 8px">${esc(pname(them))} la va a adivinar letra por letra. Puede ser una frase corta.</p>
+             <input class="inp" type="text" id="ahw" maxlength="24" autocomplete="off" placeholder="Por ejemplo: Gia comelona"><input class="inp" type="text" id="ahp" maxlength="60" placeholder="Pista (opcional)" style="margin-top:8px">
+             <div class="row"><button class="btn" id="ahok">Listo</button></div></div>`
+          : `<p class="qwait" style="margin-top:18px">🤔 ${esc(pname(them))} está pensando una palabra secreta...</p>`);
+        $('#ahok', el)?.addEventListener('click', () => {
+          const w = $('#ahw', el).value.trim().replace(/\s+/g, ' '), pista = $('#ahp', el).value.trim();
+          if (ahLetters(w).length < 2 || !/^[A-Za-zÁÉÍÓÚÜÑáéíóúüñ ]+$/.test(w)) return toast('Solo letras y espacios, mínimo 2 letras');
+          act(cur => { if (cur.word || cur.setter !== me) return; cur.word = w.toUpperCase(); cur.pista = pista; cur.turn = other(me); return cur; }).then(() => { sfx.pop(); sendPush(them, '🎈 Ahorcado', `${pname(me)} ya puso su palabra. ¡Adivina!`, '/#/ahorcado', 'ahorcado'); });
+        });
+        return;
+      }
+      const reveal = !!st.winner;
+      const word = [...st.word].map(ch => {
+        const L = ahN(ch);
+        if (!AH_ABC.includes(L)) return '<span class="sp"></span>';
+        const ok = g.includes(L);
+        return `<span class="${!ok && reveal ? 'miss' : ''}">${ok || reveal ? esc(ch) : ''}</span>`;
+      }).join('');
+      const letters = new Set(ahLetters(st.word));
+      el.innerHTML = gHead(st, p => p === st.setter ? 'puso la palabra' : 'adivina') + balloons
+        + (st.pista ? `<p class="ah-p">💡 Pista: ${esc(st.pista)}</p>` : '')
+        + `<div class="ah-w">${word}</div>`
+        + (st.winner ? winBox(st, st.winner === guesser ? `${esc(pname(guesser))} la adivinó con ${6 - fails} ${6 - fails === 1 ? 'globo' : 'globos'} vivos` : `Era: <b>${esc(st.word)}</b>`)
+          : guesser === me ? `<div class="ah-k">${AH_ABC.map(L => `<button data-l="${L}" class="${g.includes(L) ? (letters.has(L) ? 'ok' : 'no') : ''}" ${g.includes(L) ? 'disabled' : ''}>${L}</button>`).join('')}</div>`
+          : `<p class="qwait">👀 ${esc(pname(them))} está adivinando tu palabra: <b>${esc(st.word)}</b></p>`);
+      $$('[data-l]', el).forEach(b => b.onclick = () => {
+        const L = b.dataset.l;
+        act(cur => {
+          if (cur.winner || !cur.word || cur.setter === me || String(cur.g || '').includes(L)) return;
+          cur.g = String(cur.g || '') + L;
+          const set = new Set(ahLetters(cur.word));
+          if (!set.has(L)) cur.fails = (cur.fails || 0) + 1;
+          if ([...set].every(x => cur.g.includes(x))) cur.winner = me;
+          else if (cur.fails >= 6) cur.winner = cur.setter;
+          if (cur.winner) { cur.score = cur.score || zero(); cur.score[cur.winner] = (cur.score[cur.winner] || 0) + 1; }
+          return cur;
+        }).then(r => { if (r.committed) { new Set(ahLetters(r.value.word)).has(L) ? sfx.pop() : sfx.sad(); } });
+      });
+    },
+  });
+}
+
+/* =====================================================================
+   PREGUNTAS (banco de preguntas.js)
+   ===================================================================== */
+const QCAT = id => Q.CATEGORIAS.find(c => c.id === id);
+const QTIPO = id => QCAT(id)?.tipo || 'abierta';
+function qText(cat, i, subj) {
+  const q = Q.PREGUNTAS[cat]?.[i]; if (q == null) return '';
+  const t = QTIPO(cat);
+  return t === 'prefieres' ? '¿Qué prefieres?' : t === 'conoces' ? q[0] : q;
+}
+const qRand = (cat, not) => { const n = Q.PREGUNTAS[cat]?.length || 1; let i; do { i = Math.floor(Math.random() * n); } while (n > 1 && i === not); return i; };
+function qAnsLabel(cat, i, v) {
+  const t = QTIPO(cat), q = Q.PREGUNTAS[cat]?.[i];
+  if (v == null) return '';
+  if (t === 'prefieres') return q?.[v] ?? '';
+  if (t === 'quien') return pname(v);
+  if (t === 'conoces') return q?.[1]?.[v] ?? '';
+  return v;
+}
+function mountPreguntas() {
+  renderTop('Preguntas', `<button class="ib" id="qh" aria-label="Lo que hemos respondido">📚</button>`);
+  view.innerHTML = `<div id="q"></div>${reactBar()}`;
+  const el = $('#q');
+  let st = null, prevThem = null;
+  const pickCat = cat => store.set('cartas/preg', { cat, q: qRand(cat, -1), n: (st?.n || 0) + 1, pts: st?.pts || zero(), t: store.now(), by: me }).then(() => sfx.pop());
+  const nextQ = () => store.set('cartas/preg', { cat: st.cat, q: qRand(st.cat, st.q), n: (st.n || 0) + 1, pts: st.pts || zero(), t: store.now(), by: me });
+  const answer = v => store.tx('cartas/preg', cur => {
+    if (!cur || cur.n !== st.n || cur.ans?.[me] != null) return;
+    cur.ans = { ...(cur.ans || {}), [me]: v };
+    if (P.every(p => cur.ans[p] != null)) {
+      cur.done = store.now();
+      if (QTIPO(cur.cat) === 'conoces') { const subj = P[cur.n % 2], gs = other(subj); if (+cur.ans[gs] === +cur.ans[subj]) { cur.pts = cur.pts || zero(); cur.pts[gs] = (cur.pts[gs] || 0) + 1; } }
+    }
+    return cur;
+  }).then(r => {
+    if (!r.committed) return;
+    sfx.pop();
+    const v2 = r.value;
+    if (v2?.done) store.set(`cartas/preghist/${v2.n}_${v2.cat}`, { cat: v2.cat, q: v2.q, n: v2.n, ans: v2.ans, t: v2.done });
+    else sendPush(them, '💬 Preguntas', `${pname(me)} ya respondió. Te toca 👀`, '/#/preguntas', 'preg');
+  });
+  const draw = () => keepDraft(el, () => {
+    if (!st?.cat || !QCAT(st.cat)) {
+      el.innerHTML = `<p class="muted" style="text-align:center;margin:4px 0 12px">Elijan un tipo de pregunta. Los dos ven la misma y las respuestas se descubren cuando responden los dos.</p>
+        <div class="mgrid">${Q.CATEGORIAS.map(c => `<button class="mtile" data-cat="${c.id}" style="--c1:${c.c1};--c2:${c.c2}"><span class="ic">${c.icon}</span><b>${esc(c.name)}</b><small>${esc(c.desc)}</small></button>`).join('')}</div>`;
+      $$('[data-cat]', el).forEach(b => b.onclick = () => pickCat(b.dataset.cat));
+      return;
+    }
+    const c = QCAT(st.cat), t = c.tipo, q = Q.PREGUNTAS[st.cat][st.q], ans = st.ans || {}, mine = ans[me], theirs = ans[them], both = mine != null && theirs != null;
+    const subj = P[(st.n || 0) % 2];
+    let body = '';
+    const opts = (list, vals) => `<div class="qopts">${list.map((txt, k) => `<button data-v="${vals ? vals[k] : k}" class="${mine != null && String(mine) === String(vals ? vals[k] : k) ? 'on' : ''}" ${mine != null ? 'disabled' : ''}>${esc(txt)}</button>`).join('')}</div>`;
+    if (!both) {
+      if (mine == null) {
+        if (t === 'abierta') body = `<textarea class="inp" id="qa" rows="3" maxlength="300" placeholder="Tu respuesta"></textarea><div class="row"><button class="btn" id="qok">Responder</button></div>`;
+        else if (t === 'prefieres') body = opts(q);
+        else if (t === 'quien') body = opts(P.map(pname), P);
+        else body = `<p class="qwait" style="margin:0 0 4px">${subj === me ? '🙋 Responde sobre ti' : `🧠 Adivina qué va a responder ${esc(pname(them))}`}</p>` + opts(q[1]);
+        if (theirs != null) body += `<p class="qwait">👀 ${esc(pname(them))} ya respondió. Responde para ver qué dijo.</p>`;
+      } else body = `<div class="qans"><div style="--c:${pcol(me)}"><b>Tú</b>${esc(qAnsLabel(st.cat, st.q, mine))}</div></div><p class="qwait">Esperando a ${esc(pname(them))}... 🐾</p>`;
+    } else {
+      body = `<div class="qans">${P.map(p => `<div style="--c:${pcol(p)}"><b>${esc(pname(p))}${t === 'conoces' ? (p === subj ? ' (sobre sí)' : ' (adivinando)') : t === 'quien' ? ' señaló a' : ''}</b>${esc(qAnsLabel(st.cat, st.q, ans[p]))}</div>`).join('')}</div>`;
+      if (t === 'prefieres' || t === 'quien') body += `<div class="qmatch">${String(ans[P[0]]) === String(ans[P[1]]) ? '💗 ¡Coincidimos!' : '😅 No coincidimos'}</div>`;
+      if (t === 'conoces') body += `<div class="qmatch">${+ans[subj] === +ans[other(subj)] ? `🎯 ¡${esc(pname(other(subj)))} acertó!` : `❌ ${esc(pname(other(subj)))} falló`}</div><p class="qwait">Aciertos: ${P.map(p => `${esc(pname(p))} ${st.pts?.[p] || 0}`).join(' · ')}</p>`;
+    }
+    el.innerHTML = `<div class="qcard" style="--c1:${c.c1};--c2:${c.c2}"><div class="qc">${c.icon} ${esc(c.name)}</div>
+      <h2>${t === 'conoces' ? `<small style="display:block;font:800 13px var(--fb);opacity:.8;margin-bottom:4px">Sobre ${esc(subj === me ? 'ti' : pname(subj))}</small>` : ''}${esc(t === 'prefieres' ? `${q[0]} o ${q[1].charAt(0).toLowerCase() + q[1].slice(1)}?`.replace(/^/, '¿') : qText(st.cat, st.q))}</h2></div>
+      ${body}
+      <div class="row"><button class="btn ${both ? '' : 'ghost'}" id="qnext">${both ? 'Siguiente pregunta ›' : 'Saltar'}</button><button class="btn ghost" id="qcat">Cambiar tipo</button></div>`;
+    $('#qok', el)?.addEventListener('click', () => { const v = $('#qa', el).value.trim(); if (v) answer(v); else toast('Escribe tu respuesta'); });
+    $$('[data-v]', el).forEach(b => b.onclick = () => answer(t === 'quien' ? b.dataset.v : +b.dataset.v));
+    $('#qnext', el).onclick = nextQ;
+    $('#qcat', el).onclick = () => store.set('cartas/preg/cat', null);
+  });
+  const unsub = store.on('cartas/preg', v => {
+    const th = v?.ans?.[them];
+    if (st && v && v.n === st.n && th != null && prevThem == null) { sfx.pop(); navigator.vibrate?.(40); }
+    prevThem = v && st && v.n === st.n ? th : (v?.ans?.[them] ?? null);
+    st = v; draw();
+  });
+  $('#qh').onclick = () => {
+    const sh = sheet(`<h3>📚 Lo que hemos respondido</h3><div id="qhl"><p class="muted">Cargando...</p></div><div class="row"><button class="btn ghost" data-close>Cerrar</button></div>`);
+    const u = store.on('cartas/preghist', v => {
+      const list = listOf(v).filter(x => QCAT(x.cat)).sort((a, b) => b.t - a.t).slice(0, 60);
+      $('#qhl', sh).innerHTML = list.length ? list.map(x => { const c = QCAT(x.cat); const qq = Q.PREGUNTAS[x.cat][x.q]; return `<div class="card" style="margin:8px 0"><div style="font-size:12px;color:var(--muted)">${c.icon} ${esc(c.name)} · ${fdate(x.t)}</div><b style="display:block;margin:4px 0 6px">${esc(c.tipo === 'prefieres' ? `${qq[0]} o ${qq[1]}` : qText(x.cat, x.q))}</b><div class="qans">${P.map(p => `<div style="--c:${pcol(p)}"><b>${esc(pname(p))}</b>${esc(qAnsLabel(x.cat, x.q, x.ans?.[p]))}</div>`).join('')}</div></div>`; }).join('') : '<p class="muted">Todavía no hay respuestas guardadas.</p>';
+      setTimeout(u, 0);
+    });
+  };
+  current = { id: 'preguntas', cleanup() { unsub(); } };
+}
+
+/* ---------- Pregunta del día (en el inicio) ---------- */
+const ABIERTAS = Q.CATEGORIAS.filter(c => c.tipo === 'abierta').flatMap(c => Q.PREGUNTAS[c.id].map((_, i) => [c.id, i]));
+function diariaDe(key) { let h = 0; for (const ch of key) h = (h * 31 + ch.charCodeAt(0)) >>> 0; const [cat, i] = ABIERTAS[h % ABIERTAS.length]; return { cat, i, text: Q.PREGUNTAS[cat][i] }; }
+function diariaCard(el, key, data) {
+  if (!el) return;
+  const q = diariaDe(key), mine = data?.[me], theirs = data?.[them];
+  keepDraft(el, () => {
+    el.innerHTML = `<div class="dqh"><span>☀️ Pregunta del día</span><button class="link" id="dqold">días anteriores</button></div><h3>${esc(q.text)}</h3>
+      ${mine ? `<div class="qans"><div style="--c:${pcol(me)}"><b>Tú</b>${esc(mine.text)}</div>${theirs ? `<div style="--c:${pcol(them)}"><b>${esc(pname(them))}</b>${esc(theirs.text)}</div>` : ''}</div>${theirs ? '' : `<p class="qwait" style="margin:6px 0 0">${esc(pname(them))} todavía no responde</p>`}`
+        : `<textarea class="inp" id="dqa" rows="2" maxlength="300" placeholder="Tu respuesta"></textarea><div class="row" style="margin-bottom:0"><button class="btn sm" id="dqok">Responder</button></div>${theirs ? `<p class="qwait" style="margin:6px 0 0">👀 ${esc(pname(them))} ya respondió. Responde para ver qué dijo.</p>` : ''}`}`;
+  });
+  $('#dqok', el)?.addEventListener('click', () => {
+    const v = $('#dqa', el).value.trim(); if (!v) return toast('Escribe tu respuesta');
+    store.set(`cartas/diaria/${key}/${me}`, { text: v, t: store.now() }); sfx.pop();
+    sendPush(them, '☀️ Pregunta del día', theirs ? `${pname(me)} respondió. Ya pueden ver lo que dijo cada uno` : `${pname(me)} ya respondió. ¿Y tú?`, '/', 'diaria');
+  });
+  $('#dqold', el).onclick = () => {
+    const sh = sheet(`<h3>☀️ Días anteriores</h3><div id="dql"><p class="muted">Cargando...</p></div><div class="row"><button class="btn ghost" data-close>Cerrar</button></div>`);
+    const u = store.on('cartas/diaria', v => {
+      const days = Object.keys(v || {}).filter(k => k < key).sort().reverse().slice(0, 30);
+      $('#dql', sh).innerHTML = days.length ? days.map(k => { const d = v[k] || {}, [y, m, dd] = k.split('-').map(Number); return `<div class="card" style="margin:8px 0"><div style="font-size:12px;color:var(--muted)">${fdate(new Date(y, m - 1, dd), { weekday: 'long', day: 'numeric', month: 'short' })}</div><b style="display:block;margin:4px 0 6px">${esc(diariaDe(k).text)}</b><div class="qans">${P.map(p => `<div style="--c:${pcol(p)}"><b>${esc(pname(p))}</b>${d[p] ? (d[me] ? esc(d[p].text) : p === me ? '' : '🙈 (no respondiste ese día)') : '<span class="muted">No respondió</span>'}</div>`).join('')}</div></div>`; }).join('') : '<p class="muted">Todavía no hay días anteriores.</p>';
+      setTimeout(u, 0);
+    });
+  };
+}
+
+/* =====================================================================
+   CARTAS "ÁBRELA CUANDO..."
+   ===================================================================== */
+let cartas = {};
+const CUANDO = ['estés triste', 'me extrañes mucho', 'no puedas dormir', 'tengas un mal día', 'estés feliz', 'necesites reírte', 'estemos peleados', 'dudes de nosotros', 'te sientas sola', 'cumplamos un año', 'nos volvamos a ver', 'sea tu cumpleaños'];
+const cartaLock = c => c.desde && today0() < ymd(c.desde);
+function mountCartas() {
+  renderTop('Cartas');
+  let tab = 'para';
+  view.innerHTML = `<div class="tabs"><button data-t="para">💌 Para mí</button><button data-t="mias">✍️ Las que escribí</button></div><div id="cl"></div><div class="row"><button class="btn" id="cnew">✍️ Escribir una carta</button></div>`;
+  const draw = () => {
+    $$('[data-t]').forEach(b => b.classList.toggle('on', b.dataset.t === tab));
+    const all = listOf(cartas).sort((a, b) => b.t - a.t);
+    const list = all.filter(c => tab === 'para' ? c.para === me : c.de === me);
+    const el = $('#cl'); if (!el) return;
+    el.innerHTML = list.length ? `<div class="sobres">${list.map(c => {
+      const lock = cartaLock(c);
+      return `<button class="sobre ${c.abierta ? 'open' : ''} ${lock ? 'lock' : ''}" data-id="${c.id}"><span class="sello">${c.abierta ? '💌' : lock ? '🔒' : '❤️'}</span><b>Ábrela cuando ${esc(c.cuando)}</b>
+        <small>${tab === 'para' ? `De ${esc(pname(c.de))}` : `Para ${esc(pname(c.para))}`} · ${c.abierta ? `abierta el ${fdate(c.abierta)}` : lock ? `se abre el ${fdate(ymd(c.desde))}` : 'sin abrir'}</small></button>`;
+    }).join('')}</div>` : `<p class="muted" style="text-align:center;padding:24px 10px">${tab === 'para' ? `Todavía no tienes cartas de ${esc(pname(them))}. Cuando te escriba aparecerán aquí, cerradas, para abrirlas en el momento justo.` : `Escríbele cartas a ${esc(pname(them))} para que las abra cuando las necesite: cuando esté triste, cuando te extrañe, cuando no pueda dormir...`}</p>`;
+    $$('[data-id]', el).forEach(b => b.onclick = () => openCarta(b.dataset.id));
+  };
+  const openCarta = id => {
+    const c = cartas[id]; if (!c) return;
+    const show = () => sheet(`<div class="carta"><h4>Ábrela cuando ${esc(c.cuando)}</h4><p>${esc(c.texto)}</p><small>Con amor, ${esc(pname(c.de))} · ${fdate(c.t, { day: 'numeric', month: 'long', year: 'numeric' })}</small></div>
+      <div class="row">${c.de === me ? '<button class="btn ghost" id="cdel">🗑️ Borrar</button>' : ''}<button class="btn ghost" data-close>Cerrar</button></div>`);
+    if (c.de === me) { const sh = show(); $('#cdel', sh).onclick = () => { sh.remove(); confirmSheet('🗑️ ¿Borrar esta carta?', '', 'Sí, borrar', () => store.set('cartas/cartas/' + id, null)); }; return; }
+    if (c.abierta) return show();
+    if (cartaLock(c)) return toast(`🔒 Esta carta se abre el ${fdate(ymd(c.desde), { day: 'numeric', month: 'long' })}`);
+    confirmSheet(`💌 Ábrela cuando ${esc(c.cuando)}`, '¿De verdad es el momento? Solo se abre una vez... bueno, después la puedes volver a leer 😉', 'Abrir', () => {
+      store.set(`cartas/cartas/${id}/abierta`, store.now()); rain(18, ['💌', '💗', '✨']); sfx.win(); show();
+      sendPush(them, '💌 Cartas', `${pname(me)} abrió tu carta «Ábrela cuando ${c.cuando}»`, '/#/cartas', 'carta-abierta');
+    });
+  };
+  $$('[data-t]').forEach(b => b.onclick = () => { tab = b.dataset.t; draw(); });
+  $('#cnew').onclick = () => {
+    let cuando = CUANDO[0];
+    const sh = sheet(`<h3>✍️ Carta para ${esc(pname(them))}</h3><h4>Ábrela cuando...</h4><div class="pcats" style="flex-wrap:wrap">${CUANDO.map(x => `<button data-w="${esc(x)}" class="${x === cuando ? 'on' : ''}">${esc(x)}</button>`).join('')}</div>
+      <input type="text" id="cw" maxlength="60" placeholder="O escribe otro momento: ...cuando ">
+      <h4>Tu carta</h4><textarea id="ct" rows="6" maxlength="2000" placeholder="Escribe con el corazón"></textarea>
+      <h4>¿No se puede abrir antes de una fecha? <span class="muted" style="font-size:12px">(opcional)</span></h4><input type="date" id="cd">
+      <div class="row"><button class="btn" id="cok">Cerrar el sobre y mandarla</button><button class="btn ghost" data-close>Cancelar</button></div>`);
+    $$('[data-w]', sh).forEach(b => b.onclick = () => { cuando = b.dataset.w; $('#cw', sh).value = ''; $$('[data-w]', sh).forEach(x => x.classList.toggle('on', x === b)); });
+    $('#cok', sh).onclick = () => {
+      const texto = $('#ct', sh).value.trim(), w = $('#cw', sh).value.trim().replace(/^cuando\s+/i, ''), desde = $('#cd', sh).value;
+      if (!texto) return toast('Escribe la carta');
+      const cu = w || cuando;
+      store.set(`cartas/cartas/${uid()}`, { de: me, para: them, cuando: cu, texto, t: store.now(), desde: /^\d{4}-\d{2}-\d{2}$/.test(desde) ? desde : '' });
+      sh.remove(); tab = 'mias'; draw(); rain(14, ['💌', '💗']); sfx.pop(); toast(`💌 Carta enviada. ${pname(them)} la verá cerrada`);
+      sendPush(them, '💌 Tienes una carta nueva', `${pname(me)} te escribió: «Ábrela cuando ${cu}»`, '/#/cartas', 'carta');
+    };
+  };
+  draw();
+  current = { id: 'cartas', onCartas: draw, cleanup() {} };
+}
+
+/* =====================================================================
+   FRASCO DE RAZONES
+   ===================================================================== */
+function mountRazones() {
+  renderTop('Frasco de razones');
+  view.innerHTML = `<div class="jar" id="jar"></div><div class="card" id="rmias"></div>`;
+  let raz = {}, shown = null;
+  const seenKey = 'nuestra:razones:' + me;
+  const seen = () => { try { return new Set(JSON.parse(lsGet(seenKey) || '[]')); } catch { return new Set(); } };
+  const draw = () => {
+    const all = listOf(raz), paraMi = all.filter(r => r.de === them), mias = all.filter(r => r.de === me).sort((a, b) => b.t - a.t);
+    const s = seen(), nuevas = paraMi.filter(r => !s.has(r.id)).length;
+    $('#jar').innerHTML = `<span class="j" id="jj">🫙</span><b>${paraMi.length} ${paraMi.length === 1 ? 'razón' : 'razones'}</b><p class="muted" style="margin:2px 0 10px;font-size:13.5px">por las que ${esc(pname(them))} te ama${nuevas ? ` · <span style="color:#ffd36b">${nuevas} sin leer</span>` : ''}</p>
+      <button class="btn" id="jsac" ${paraMi.length ? '' : 'disabled'}>✨ Sacar una razón</button>
+      ${shown ? `<div class="razon">${esc(shown.texto)}<small style="display:block;font:700 12px var(--fb);color:#9b7f8f;margin-top:6px">${fdate(shown.t, { day: 'numeric', month: 'long', year: 'numeric' })}</small></div>` : paraMi.length ? '' : `<p class="muted" style="font-size:13px;margin:10px 0 0">Cuando ${esc(pname(them))} escriba razones, aquí las vas a poder sacar una por una.</p>`}`;
+    $('#jsac').onclick = () => {
+      const s2 = seen(), pool = paraMi.filter(r => !s2.has(r.id) && r.id !== shown?.id);
+      shown = pick(pool.length ? pool : paraMi.filter(r => r.id !== shown?.id).length ? paraMi.filter(r => r.id !== shown?.id) : paraMi);
+      s2.add(shown.id); lsSet(seenKey, JSON.stringify([...s2]));
+      draw(); const j = $('#jj'); j.classList.add('shake'); rain(10, ['💗', '✨', '💜']); sfx.pop();
+    };
+    keepDraft($('#rmias'), () => {
+      $('#rmias').innerHTML = `<h3>✍️ Mis razones para ${esc(pname(them))} <small class="muted" style="font:800 13px var(--fb)">${mias.length}</small></h3>
+        <div class="addrow"><input class="inp" type="text" id="rnew" maxlength="200" placeholder="Te amo porque..."><button class="btn sm" id="radd">Al frasco</button></div>
+        <div class="clist">${mias.slice(0, 50).map(r => `<div class="citem"><div class="tx">${esc(r.texto)}<small>${fdate(r.t)}</small></div><button class="x" data-del="${r.id}">✕</button></div>`).join('')}</div>`;
+    });
+    const add = () => { const v = $('#rnew').value.trim(); if (!v) return; store.set(`cartas/razones/${uid()}`, { de: me, texto: v, t: store.now() }); $('#rnew').value = ''; sfx.pop(); flyE('💗'); };
+    $('#radd').onclick = add; $('#rnew').onkeydown = e => { if (e.key === 'Enter') add(); };
+    $$('[data-del]', $('#rmias')).forEach(b => b.onclick = () => store.set('cartas/razones/' + b.dataset.del, null));
+  };
+  const unsub = store.on('cartas/razones', v => { raz = v || {}; draw(); });
+  current = { id: 'razones', cleanup() { unsub(); } };
+}
+
+/* =====================================================================
+   VALES DE AMOR
+   ===================================================================== */
+let cupones = {};
+const VALES = [['💆', 'Un masaje de 20 minutos'], ['🥞', 'Un desayuno en la cama'], ['🎬', 'Elegir la peli sin discutir'], ['🍽️', 'Una cena que yo invito'], ['🫂', 'Un abrazo de 10 minutos'], ['🎤', 'Una canción cantada solo para ti'], ['📞', 'Una llamada sin límite de tiempo'], ['🏆', 'Ganar una discusión, sin preguntas'], ['💋', '100 besos'], ['🌹', 'Una cita sorpresa'], ['🍫', 'Un antojo que yo pago'], ['😴', 'Una siesta juntos']];
+function mountCupones() {
+  renderTop('Vales de amor');
+  let tab = 'mios';
+  view.innerHTML = `<div class="tabs"><button data-t="mios">🎟️ Mis vales</button><button data-t="dados">🎁 Los que regalé</button></div><div id="vl"></div><div class="row"><button class="btn" id="vnew">🎁 Regalar un vale</button></div>`;
+  const draw = () => {
+    $$('[data-t]').forEach(b => b.classList.toggle('on', b.dataset.t === tab));
+    const list = listOf(cupones).filter(c => tab === 'mios' ? c.para === me : c.de === me).sort((a, b) => (!!a.usado - !!b.usado) || b.t - a.t);
+    const el = $('#vl'); if (!el) return;
+    el.innerHTML = list.length ? list.map(c => `<div class="vale ${c.usado ? 'used' : ''}"><span class="vi">${esc(c.icon || '🎟️')}</span><div class="vt"><small>VALE POR</small><b>${esc(c.texto)}</b><small>${tab === 'mios' ? `De ${esc(pname(c.de))}` : `Para ${esc(pname(c.para))}`} · ${c.usado ? `canjeado el ${fdate(c.usado)}` : fdate(c.t)}</small></div>${tab === 'mios' && !c.usado ? `<button class="btn" data-use="${c.id}">Canjear</button>` : ''}${tab === 'dados' && !c.usado ? `<button class="x" data-del="${c.id}" style="color:#6b4a2c">✕</button>` : ''}</div>`).join('')
+      : `<p class="muted" style="text-align:center;padding:24px 10px">${tab === 'mios' ? `Todavía no tienes vales. Cuando ${esc(pname(them))} te regale uno, lo canjeas cuando quieras y le llega el aviso.` : `Regálale vales a ${esc(pname(them))}: un masaje, una cena, ganar una discusión...`}</p>`;
+    $$('[data-use]', el).forEach(b => b.onclick = () => {
+      const c = cupones[b.dataset.use];
+      confirmSheet('🎟️ ¿Canjear este vale?', `«${esc(c.texto)}». ${esc(pname(c.de))} recibirá el aviso y tendrá que cumplir 😌`, 'Canjear', () => {
+        store.set(`cartas/cupones/${b.dataset.use}/usado`, store.now()); confetti(); sfx.win(); popup('¡Canjeado!', c.texto);
+        sendPush(them, '🎟️ Vale canjeado', `${pname(me)} canjeó: «${c.texto}». ¡A cumplir!`, '/#/cupones', 'vale-usado');
+      });
+    });
+    $$('[data-del]', el).forEach(b => b.onclick = () => confirmSheet('¿Quitar este vale?', '', 'Quitar', () => store.set('cartas/cupones/' + b.dataset.del, null)));
+  };
+  $$('[data-t]').forEach(b => b.onclick = () => { tab = b.dataset.t; draw(); });
+  $('#vnew').onclick = () => {
+    const sh = sheet(`<h3>🎁 Vale para ${esc(pname(them))}</h3><div class="retos">${VALES.map((v, i) => `<button data-i="${i}">${v[0]} ${esc(v[1])}</button>`).join('')}</div>
+      <h4>O inventa uno</h4><input type="text" id="vt" maxlength="80" placeholder="Vale por..."><div class="row"><button class="btn" id="vok">Regalar</button><button class="btn ghost" data-close>Cancelar</button></div>`);
+    const give = (icon, texto) => {
+      store.set(`cartas/cupones/${uid()}`, { de: me, para: them, icon, texto, t: store.now() });
+      sh.remove(); tab = 'dados'; draw(); sfx.pop(); rain(12, ['🎟️', '🎁', '💗']); toast(`🎁 Vale regalado a ${pname(them)}`);
+      sendPush(them, '🎁 Te regalaron un vale', `${pname(me)}: «${texto}»`, '/#/cupones', 'vale');
+    };
+    $$('[data-i]', sh).forEach(b => b.onclick = () => give(...VALES[+b.dataset.i]));
+    $('#vok', sh).onclick = () => { const v = $('#vt', sh).value.trim(); if (v) give('🎟️', v); else toast('Escribe el vale o elige uno'); };
+  };
+  draw();
+  current = { id: 'cupones', onCupones: draw, cleanup() {} };
+}
+
+/* =====================================================================
+   CUANDO ESTEMOS JUNTOS (planes)
+   ===================================================================== */
+function mountPlanes() {
+  renderTop('Cuando estemos juntos');
+  view.innerHTML = `<p class="muted" style="text-align:center;margin:2px 0 10px;font-size:14px">Marca con ❤️ lo que más quieres hacer. Cuando lo hagamos, lo tachamos ✓</p><div id="pl"></div>`;
+  let data = {}, filtro = 'todo';
+  const draw = () => keepDraft($('#pl'), () => {
+    const custom = listOf(data.custom).map(x => ({ key: x.id, cat: x.cat || 'romantico', texto: x.texto, de: x.de }));
+    const all = [...Q.PLANES.map(([cat, texto], i) => ({ key: 'p' + i, cat, texto })), ...custom];
+    const q = data.quiero || {}, h = data.hecho || {};
+    const both = x => P.every(p => q[x.key]?.[p]);
+    let list = filtro === 'todo' ? all : filtro === 'dos' ? all.filter(both) : filtro === 'hecho' ? all.filter(x => h[x.key]) : all.filter(x => x.cat === filtro);
+    list = list.sort((a, b) => (!!h[a.key] - !!h[b.key]) || (both(b) - both(a)) || ((!!q[b.key]?.[me]) - (!!q[a.key]?.[me])));
+    const done = all.filter(x => h[x.key]).length;
+    const el = $('#pl');
+    el.innerHTML = `<div class="card"><div style="display:flex;justify-content:space-between;font-weight:900"><span>✅ Ya hicimos ${done}</span><span class="muted">de ${all.length}</span></div><div class="tabar" style="margin:8px 0 2px"><i style="width:${Math.round(done / all.length * 100)}%;background:linear-gradient(90deg,var(--pink),var(--purple))"></i></div></div>
+      <div class="pcats"><button data-f="todo" class="${filtro === 'todo' ? 'on' : ''}">Todo</button><button data-f="dos" class="${filtro === 'dos' ? 'on' : ''}">💞 Los dos</button>${Q.PLAN_CATS.map(c => `<button data-f="${c.id}" class="${filtro === c.id ? 'on' : ''}">${c.icon} ${esc(c.name)}</button>`).join('')}<button data-f="hecho" class="${filtro === 'hecho' ? 'on' : ''}">✓ Hechos</button></div>
+      <div class="clist">${list.map(x => `<div class="citem ${h[x.key] ? 'done' : ''}"><button class="ck" data-ck="${x.key}">${h[x.key] ? '✓' : ''}</button><div class="tx">${esc(x.texto)}<small>${Q.PLAN_CATS.find(c => c.id === x.cat)?.icon || '✨'} ${h[x.key] ? `hecho el ${fdate(h[x.key])}` : both(x) ? '💞 Los dos lo queremos' : q[x.key]?.[them] ? `${esc(pname(them))} lo quiere` : ''}${x.de ? ` · idea de ${esc(pname(x.de))}` : ''}</small></div><button class="lv" data-lv="${x.key}">${q[x.key]?.[me] ? '❤️' : '🤍'}</button></div>`).join('')}</div>
+      ${list.length ? '' : '<p class="muted" style="text-align:center;font-size:13.5px">Nada por aquí todavía</p>'}
+      <div class="card" style="margin-top:12px"><h3>➕ Nueva idea</h3><div class="addrow"><input class="inp" type="text" id="pnew" maxlength="120" placeholder="Por ejemplo: ir a ver la nieve"><button class="btn sm" id="padd">Añadir</button></div></div>`;
+    $$('[data-f]', el).forEach(b => b.onclick = () => { filtro = b.dataset.f; draw(); });
+    $$('[data-lv]', el).forEach(b => b.onclick = () => { const k = b.dataset.lv, on = q[k]?.[me]; store.set(`cartas/planes/quiero/${k}/${me}`, on ? null : true); if (!on) { flyE('❤️'); sfx.pop(); } });
+    $$('[data-ck]', el).forEach(b => b.onclick = () => { const k = b.dataset.ck; store.set(`cartas/planes/hecho/${k}`, h[k] ? null : store.now()); if (!h[k]) { confetti(1600); sfx.win(); } });
+    const add = () => { const v = $('#padd') && $('#pnew').value.trim(); if (!v) return; store.set(`cartas/planes/custom/${uid()}`, { texto: v, de: me, t: store.now(), cat: filtro !== 'todo' && Q.PLAN_CATS.some(c => c.id === filtro) ? filtro : 'romantico' }); $('#pnew').value = ''; sfx.pop(); };
+    $('#padd', el).onclick = add; $('#pnew', el).onkeydown = e => { if (e.key === 'Enter') add(); };
+  });
+  const unsub = store.on('cartas/planes', v => { data = v || {}; draw(); });
+  current = { id: 'planes', cleanup() { unsub(); } };
+}
+
+/* ---------- Mosaicos del inicio ---------- */
+const NUESTRO = [
+  { id: 'preguntas', name: 'Preguntas', icon: '💬', desc: '¿Qué prefieres?, ¿quién es más...?, ¿cuánto me conoces?', c1: '#25c2a0', c2: '#3a7ce0' },
+  { id: 'cartas', name: 'Ábrela cuando...', icon: '💌', desc: 'Cartas para el momento justo', c1: '#ff2d55', c2: '#ff4fa3' },
+  { id: 'razones', name: 'Frasco de razones', icon: '🫙', desc: 'Por qué te amo, una por una', c1: '#ff4fa3', c2: '#9d6bff' },
+  { id: 'cupones', name: 'Vales de amor', icon: '🎟️', desc: 'Regala y canjea', c1: '#ffb020', c2: '#ff7a2d' },
+  { id: 'planes', name: 'Cuando estemos juntos', icon: '🗺️', desc: 'Todo lo que vamos a hacer', c1: '#3a7ce0', c2: '#9d6bff' },
+  { id: 'album', name: 'Nuestro álbum', icon: '📸', desc: 'Nuestras fotos', c1: '#9d6bff', c2: '#ff4fa3' },
+];
+function nuestroChip(id) {
+  if (id === 'cartas') { const n = listOf(cartas).filter(c => c.para === me && !c.abierta && !cartaLock(c)).length; return n ? `<span class="chip go">${n} sin abrir</span>` : ''; }
+  if (id === 'cupones') { const n = listOf(cupones).filter(c => c.para === me && !c.usado).length; return n ? `<span class="chip gift">${n} ${n === 1 ? 'vale' : 'vales'}</span>` : ''; }
+  return '';
+}
+function juegoChip(g) {
+  const v = jgames[g], t = presence[them] || {};
+  if (t.on && t.at === g) return `<span class="chip">🟢 ${esc(pname(them))} aquí</span>`;
+  if (!v) return '';
+  if (v.winner) return '';
+  return v.turn === me ? '<span class="chip go">¡Tu turno!</span>' : '';
 }
 
 /* ---------- WhatsApp: contar los te amo ----------
@@ -1240,41 +2325,6 @@ function openWhatsApp() {
     };
     draw();
   };
-}
-
-function openAtajo() {
-  const base = CONFIG.firebase?.databaseURL ? `${CONFIG.firebase.databaseURL.replace(/\/$/, '')}/rooms/${CONFIG.ROOM}/cartas` : 'https://TU-BASE/rooms/SALA/cartas';
-  const u1 = `${base}/teamo/live.json`, u2 = `${base}/react/${me}.json`;
-  const row = (v, id) => `<div class="copy"><code id="${id}">${esc(v)}</code><button data-copy="${id}">Copiar</button></div>`;
-  const sh = sheet(`<h3>⚡ Te amo con Siri</h3>
-    <p>Un atajo del iPhone que, con una sola orden, le manda "Te amo ❤️" a ${esc(pname(them))} por WhatsApp y suma al contador al instante. Lo puedes lanzar diciendo <b>"Oye Siri, te amo"</b>, tocando dos veces la parte de atrás del iPhone o desde un ícono en la pantalla de inicio.</p>
-    <p class="muted" style="font-size:13px">Cada uno lo crea en su teléfono. Estos datos ya son los tuyos, ${esc(pname(me))}.</p>
-    <h4>1. Contar el te amo</h4>
-    <ol class="steps"><li>Abre <b>Atajos</b>, toca <b>+</b> y ponle de nombre <b>Te amo</b>.</li>
-      <li>Agrega la acción <b>Obtener contenido de URL</b> y pega esta URL:</li></ol>
-    ${row(u1, 'cu1')}
-    <ol class="steps" start="3"><li>Toca la flecha de la acción. Método <b>POST</b>, cuerpo <b>JSON</b>, y agrega estos campos:</li></ol>
-    <div class="map"><div><span>p <small class="muted">(Texto)</small></span><b>${esc(me)}</b></div><div><span>w <small class="muted">(Número)</small></span><b>1</b></div><div><span>t <small class="muted">(Diccionario)</small></span><b>.sv = timestamp</b></div></div>
-    <p class="muted" style="font-size:13px">En el campo <b>t</b> elige Diccionario y adentro agrega un campo de texto con clave <b>.sv</b> y valor <b>timestamp</b>.</p>
-    <h4>2. Avisarle con la lluvia de corazones</h4>
-    <ol class="steps" start="4"><li>Agrega otra vez <b>Obtener contenido de URL</b> con esta URL:</li></ol>
-    ${row(u2, 'cu2')}
-    <ol class="steps" start="5"><li>Método <b>PUT</b>, cuerpo <b>JSON</b>: campo <b>e</b> (Texto) = <b>teamo</b>, y campo <b>t</b> (Diccionario) con <b>.sv</b> = <b>timestamp</b>, igual que antes.</li></ol>
-    <h4>3. Mandarlo por WhatsApp</h4>
-    <ol class="steps" start="6"><li>Agrega la acción de WhatsApp <b>Enviar mensaje</b>, elige a ${esc(pname(them))} y escribe <b>Te amo ❤️</b>. WhatsApp se abre con el mensaje listo y solo tocas enviar.</li></ol>
-    <h4>4. Lanzarlo rápido</h4>
-    <ol class="steps" start="7"><li><b>Siri:</b> di "Oye Siri, te amo".</li>
-      <li><b>Toque posterior:</b> Ajustes › Accesibilidad › Tocar › Toque posterior › Doble toque › <b>Te amo</b>.</li>
-      <li><b>Pantalla de inicio:</b> en el atajo, Compartir › Añadir a pantalla de inicio.</li></ol>
-    <h4>🥺 Y uno para te extraño</h4>
-    <p style="font-size:14px">Duplica el atajo y llámalo <b>Te extraño</b>. En el paso 3 agrega un campo más: <b>k</b> (Texto) = <b>ex</b>. En el paso 5 cambia <b>teamo</b> por <b>teex</b>, y el mensaje de WhatsApp por <b>Te extraño 🥺</b>.</p>
-    <p class="muted" style="font-size:13px">Cuando vuelvan a exportar el chat, estos ya vienen incluidos y no se cuentan dos veces.</p>
-    <div class="row"><button class="btn ghost" data-close>Listo</button></div>`);
-  $$('[data-copy]', sh).forEach(b => b.onclick = async () => {
-    const v = $('#' + b.dataset.copy, sh).textContent;
-    try { await navigator.clipboard.writeText(v); } catch { const r = document.createRange(); r.selectNodeContents($('#' + b.dataset.copy, sh)); getSelection().removeAllRanges(); getSelection().addRange(r); document.execCommand('copy'); }
-    b.textContent = '¡Listo!'; setTimeout(() => b.textContent = 'Copiar', 1500);
-  });
 }
 
 /* ---------- Gia narra el juego ---------- */
